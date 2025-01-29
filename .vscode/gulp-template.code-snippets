@@ -1,0 +1,11 @@
+{
+  "SVG icon sprite": {
+    "prefix": "svgIcon",
+    "body": [
+      "<svg class=\"icon icon_${1:example}\">",
+	    "	<use href=\"./img/svgsprite/sprite.symbol.svg#${1:example}\"></use>",
+      "</svg>"
+    ],
+    "description": "SVG icon sprite"
+  }
+}

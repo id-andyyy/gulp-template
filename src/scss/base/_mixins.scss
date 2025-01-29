@@ -1,0 +1,43 @@
+// * $min-width and $max-width can only be numbers
+@function adaptive-value(
+  $min-value,
+  $max-value,
+  $min-width: var(--min-layout-width),
+  $max-width: var(--max-layout-width)
+) {
+  @return calc(
+    #{$min-value + px} + (($max-value - $min-value) * ((100vw - calc($min-width * 1px)) / ($max-width - $min-width)))
+  );
+}
+
+@function percentage-value($dimension, $value, $max-width: 1280, $max-height: 832) {
+  @if $dimension == width {
+    @return calc($value / $max-width * 100%);
+  } @else {
+    @return calc($value / $max-height * 100%);
+  }
+}
+
+@mixin laptop() {
+  @media (max-width: 1439px) {
+    @content;
+  }
+}
+
+@mixin tablet() {
+  @media (max-width: 1023px) {
+    @content;
+  }
+}
+
+@mixin mobile() {
+  @media (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin media-bg() {
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    @content;
+  }
+}
