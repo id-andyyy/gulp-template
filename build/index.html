@@ -28,10 +28,9 @@
           <div class="menu__row">
             <ul class="menu__list menu-list">
               <li class="menu-list__item"><a href="#start" class="menu-list__link link-animation">Начало работы</a></li>
-              <li class="menu-list__item"><a href="#fonts" class="menu-list__link link-animation">Шрифты</a></li>
-              <li class="menu-list__item"><a href="#svg" class="menu-list__link link-animation">SVG</a></li>
-              <li class="menu-list__item"><a href="#containers" class="menu-list__link link-animation">Контейнеры</a></li>
-              <li class="menu-list__item"><a href="#modules" class="menu-list__link link-animation">Готовые модули</a></li>
+              <li class="menu-list__item"><a href="#automation" class="menu-list__link link-animation">Автоматизация</a></li>
+              <li class="menu-list__item"><a href="#classes" class="menu-list__link link-animation">Готовые классы</a></li>
+              <li class="menu-list__item"><a href="#components" class="menu-list__link link-animation">Компоненты</a></li>
               <li class="menu-list__item"><a href="#feedback" class="menu-list__link link-animation">Обратная связь</a></li>
             </ul>
           </div>
@@ -42,27 +41,43 @@
 </header>
   <main class="main">
     <div class="container">
-      <section class="start">
-  <div class="start__title title">
+      <section class="about">
+  <div class="about__title title">
     <svg class="icon icon_gulp title__icon">
       <use href="./img/svgsprite/sprite.symbol.svg#gulp"></use>
     </svg>
     <div class="title__text">
-      <h1 class="title__heading">Gulp Template</h1>
+      <h1 class="h1">Gulp Template</h1>
       <div class="title__sign">by&#160;<a href="https://github.com/id-andyyy" target="_blank" class="title__link link-animation">@id_andyyy</a></div>
     </div>
   </div>
-  <div class="start__description">
-    Для тех, кто ценит время. Меньше рутины, больше творчества.
+  <div class="about__description description">
+    <div class="description__slogan">
+      Для тех, кто ценит время. Меньше рутины, больше творчества.
+    </div>
+    <div class="description__features">
+      <h3 class="h3">Ключевые возможности шаблона</h3>
+      <ul class="list">
+        <li>Встроенный шаблонизатор</li>
+        <li>Компиляция SCSS</li>
+        <li>Оптимизация картинок</li>
+        <li>Конвертация и&#160;подключение шрифтов</li>
+        <li>Готовые компоненты</li>
+        <li>Стили на&#160;все случаи жизни</li>
+        <li>и&#160;ещё куча всего</li>
+      </ul>
+    </div>
   </div>
+</section>
+      <section class="start" id="start">
   <div class="start__build build">
-    <h2 class="build__heading">Начало работы</h2>
+    <h2 class="build__heading h2">Начало работы</h2>
     <div class="build__text">
-      Это шаблон для эффективной работы с&#160;Gulp. Если вы&#160;хотите ознакомиться с&#160;документацией самой библиотеки, посетите <a href="https://gulpjs.com/docs/en/getting-started/quick-start/" target="_blank" class="link link-animation">официальный сайт</a>.
+      Если вы&#160;хотите ознакомиться с&#160;документацией самой библиотеки, посетите <a href="https://gulpjs.com/docs/en/getting-started/quick-start/" target="_blank" class="link link-animation">официальный сайт</a>.
     </div>
-    <div class="build__text">
-      Скачайте <a href="" target="_blank">репозиторий</a> и&#160;откройте в&#160;любом редакторе кода. Для запуска в&#160;режиме разработки выполните команду <code>gulp</code>. Для сборки версии для продакшена выполните команду <code>gulp docs</code>.
-    </div>
+    <div class="build__text">Скачайте <a href="https://github.com/id-andyyy/gulp-template" target="_blank" class="link link-animation">репозиторий</a> и&#160;откройте в&#160;любом редакторе кода.</div>
+    <div class="build__text">Для запуска в&#160;режиме разработки выполните команду <code>gulp</code>. Код соберётся в&#160;папку <code>build</code></div>.
+    <div>Для сборки версии для продакшена выполните команду <code>gulp docs</code>. Код соберется в&#160;папку <code>docs</code></div>.
   </div>
 </section>
     </div>

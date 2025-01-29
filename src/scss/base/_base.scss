@@ -8,10 +8,43 @@ main.main {
   padding-top: adaptive-value(114, 125);
 }
 
+ul.list,
+ol.list {
+  padding-left: 1.5rem;
+}
+
+ul.list {
+  li {
+    list-style: disc;
+    margin-bottom: 0.5rem;
+  }
+}
+
+ol.list li {
+  list-style: decimal;
+}
+
 code {
   background-color: var(--code-color);
   padding: 0.2rem;
   border-radius: 4px;
+}
+
+h1 {
+  font-size: adaptive-value(26, 50);
+  font-weight: 600;
+}
+
+h2 {
+  font-size: adaptive-value(24, 28);
+  font-weight: 600;
+  margin: 0 0 adaptive-value(10, 15) 0;
+}
+
+h3 {
+  font-size: adaptive-value(18, 20);
+  font-weight: 600;
+  margin: 0 0 adaptive-value(10, 12);
 }
 
 .link {

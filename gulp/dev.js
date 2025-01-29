@@ -98,23 +98,6 @@ gulp.task("img:dev", function () {
     .pipe(gulp.dest("./build/img/"));
 });
 
-const svgStack = {
-  mode: {
-    stack: {
-      example: true,
-    },
-  },
-  shape: {
-    transform: [
-      {
-        svgo: {
-          js2svg: { indent: 4, pretty: true },
-        },
-      },
-    ],
-  },
-};
-
 const svgSymbol = {
   mode: {
     symbol: {
