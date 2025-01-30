@@ -1,88 +1,192 @@
 <!DOCTYPE html>
 <html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Gulp Template</title>
+		<link rel="icon" type="image/x-icon" href="./img/favicons/favicon.svg" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./img/favicons/apple-touch-icon.png" />
+		<link rel="stylesheet" href="./css/main.css" />
+	</head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gulp Template</title>
-  <link rel="icon" type="image/x-icon" href="./img/favicons/favicon.svg">
-    <link rel="apple-touch-icon" sizes="180x180" href="./img/favicons/apple-touch-icon.png">
-  <link rel="stylesheet" href="./css/main.css">
-
-</head>
-
-<body>
-  <header class="header">
-  <div class="container">
-    <div class="header__row">
-      <a href="#" class="header__logo">
-        <svg class="icon icon_gulp header__icon">
-          <use href="./img/svgsprite/sprite.symbol.svg#gulp"></use>
-        </svg>
-      </a>
-      <div class="header__menu menu">
-        <button class="menu__icon">
-          <span></span>
-        </button>
-        <nav class="menu__body">
-          <div class="menu__row">
-            <ul class="menu__list menu-list">
-              <li class="menu-list__item"><a href="#start" class="menu-list__link link-animation">Начало работы</a></li>
-              <li class="menu-list__item"><a href="#automation" class="menu-list__link link-animation">Автоматизация</a></li>
-              <li class="menu-list__item"><a href="#classes" class="menu-list__link link-animation">Готовые классы</a></li>
-              <li class="menu-list__item"><a href="#components" class="menu-list__link link-animation">Компоненты</a></li>
-              <li class="menu-list__item"><a href="#feedback" class="menu-list__link link-animation">Обратная связь</a></li>
-            </ul>
-          </div>
-        </nav>
-      </div>
-    </div>
-  </div>
-</header>
-  <main class="main">
-    <div class="container">
-      <section class="about">
-  <div class="about__title title">
-    <svg class="icon icon_gulp title__icon">
-      <use href="./img/svgsprite/sprite.symbol.svg#gulp"></use>
-    </svg>
-    <div class="title__text">
-      <h1 class="h1">Gulp Template</h1>
-      <div class="title__sign">by&#160;<a href="https://github.com/id-andyyy" target="_blank" class="title__link link-animation">@id_andyyy</a></div>
-    </div>
-  </div>
-  <div class="about__description description">
-    <div class="description__slogan">
-      Для тех, кто ценит время. Меньше рутины, больше творчества.
-    </div>
-    <div class="description__features">
-      <h3 class="h3">Ключевые возможности шаблона</h3>
-      <ul class="list">
-        <li>Встроенный шаблонизатор</li>
-        <li>Компиляция SCSS</li>
-        <li>Оптимизация картинок</li>
-        <li>Конвертация и&#160;подключение шрифтов</li>
-        <li>Готовые компоненты</li>
-        <li>Стили на&#160;все случаи жизни</li>
-        <li>и&#160;ещё куча всего</li>
-      </ul>
-    </div>
-  </div>
-</section>
-      <section class="start" id="start">
-  <div class="start__build build">
-    <h2 class="build__heading h2">Начало работы</h2>
-    <div class="build__text">
-      Если вы&#160;хотите ознакомиться с&#160;документацией самой библиотеки, посетите <a href="https://gulpjs.com/docs/en/getting-started/quick-start/" target="_blank" class="link link-animation">официальный сайт</a>.
-    </div>
-    <div class="build__text">Скачайте <a href="https://github.com/id-andyyy/gulp-template" target="_blank" class="link link-animation">репозиторий</a> и&#160;откройте в&#160;любом редакторе кода.</div>
-    <div class="build__text">Для запуска в&#160;режиме разработки выполните команду <code>gulp</code>. Код соберётся в&#160;папку <code>build</code></div>.
-    <div>Для сборки версии для продакшена выполните команду <code>gulp docs</code>. Код соберется в&#160;папку <code>docs</code></div>.
-  </div>
-</section>
-    </div>
-  </main>
-  <script src="./js/index.bundle.js"></script>
-</body>
-
+	<body>
+		<header class="header">
+			<div class="container">
+				<div class="header__row">
+					<a href="#" class="header__logo">
+						<svg class="icon icon_gulp header__icon">
+							<use href="./img/svgsprite/sprite.symbol.svg#gulp"></use>
+						</svg>
+					</a>
+					<div class="header__menu menu">
+						<button class="menu__icon">
+							<span></span>
+						</button>
+						<nav class="menu__body">
+							<div class="menu__row">
+								<ul class="menu__list menu-list">
+									<li class="menu-list__item"><a href="#start" class="menu-list__link link-animation">Начало работы</a></li>
+									<li class="menu-list__item"><a href="#structure" class="menu-list__link link-animation">Структура</a></li>
+									<li class="menu-list__item"><a href="#automation" class="menu-list__link link-animation">Автоматизация</a></li>
+									<li class="menu-list__item"><a href="#classes" class="menu-list__link link-animation">Готовые классы</a></li>
+									<li class="menu-list__item"><a href="#components" class="menu-list__link link-animation">Компоненты</a></li>
+									<li class="menu-list__item"><a href="#feedback" class="menu-list__link link-animation">Обратная связь</a></li>
+								</ul>
+							</div>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main class="main">
+			<div class="container">
+				<section class="about section-margin">
+					<div class="about__title title">
+						<svg class="icon icon_gulp title__icon">
+							<use href="./img/svgsprite/sprite.symbol.svg#gulp"></use>
+						</svg>
+						<div class="title__text">
+							<h1 class="h1">Gulp Template</h1>
+							<div class="title__sign">by&#160;<a href="https://github.com/id-andyyy" target="_blank" class="title__link link-animation">@id_andyyy</a></div>
+						</div>
+					</div>
+					<div class="about__description description">
+						<div class="description__slogan">
+							Для тех, кто ценит время. Меньше рутины, больше творчества.
+						</div>
+						<div class="description__features">
+							<h3 class="h3">Ключевые возможности шаблона</h3>
+							<ul class="list">
+								<li>Встроенный шаблонизатор</li>
+								<li>Компиляция SCSS</li>
+								<li>Оптимизация картинок</li>
+								<li>Конвертация и&#160;подключение шрифтов</li>
+								<li>Готовые компоненты</li>
+								<li>Стили на&#160;все случаи жизни</li>
+								<li>и&#160;ещё куча всего</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+				<section class="start section-margin" id="start">
+					<h2 class="h2">Начало работы</h2>
+					<div class="para">
+						Если вы&#160;хотите ознакомиться с&#160;документацией самой библиотеки, посетите
+						<a href="https://gulpjs.com/docs/en/getting-started/quick-start/" target="_blank" class="link link-animation">официальный сайт</a>. В&#160;сборке используется
+						Gulp версии 4.0.2.
+					</div>
+					<div class="para">
+						Скачайте <a href="https://github.com/id-andyyy/gulp-template" target="_blank" class="link link-animation">репозиторий</a> и&#160;откройте в&#160;любом
+						редакторе кода. Выполните команду <code>npm install</code> для установки всех зависимостей.
+					</div>
+					<div class="para">Для запуска в&#160;режиме разработки выполните команду <code>gulp</code>. Код соберётся в&#160;папку <code>build</code>.</div>
+					<div class="para last">Для сборки версии для продакшена выполните команду <code>gulp docs</code>. Код соберется в&#160;папку <code>docs</code>.</div>
+				</section>
+				<section class="structure section-margin" id="structure">
+					<h2>Структура проекта</h2>
+					<div class="para">
+						Проект состоит из&#160;нескольких частей. В&#160;папке <code>gulp</code> описаны таски для работы Gulp. Файлы <code>dev.js</code> и&#160;<code
+							>fonts-dev.js</code
+						>
+						отвечают за&#160;таски в&#160;режиме разработки, а&#160;<code>docs.js</code> и&#160;<code>fonts-docs.js</code>&#160;&#8212; таски в&#160;режиме продакшена.
+						Все таски запускаются из&#160;файла <code>gulpfile.js</code> в&#160;корне проекта. В&#160;файле <code>webpack.config.js</code> описаны настройки для плагина
+						<code>webpack-stream</code>
+					</div>
+					<div class="para">Папка <code>src</code> предназначена для разработки. Она состоит из&#160;следующих подпапок:</div>
+					<ul class="list">
+						<li><code>fonts</code>&#160;&#8212; для хранения <a href="#fonts" class="link link-animation">шрифтов</a>, подключаемых без участия Google Fonts.</li>
+						<li>
+							<code>html</code>&#160;&#8212; для HTML файлов. <code>index.html</code> главный файл, в&#160;него
+							<a href="#template" class="link link-animation">подключаются</a> файлы из&#160;подпапки <code>blocks</code>.
+						</li>
+						<li>
+							<code>img</code>&#160;&#8212; для хранения картинок. В&#160;папку <code>svgicons</code> помещаются
+							<a href="#svg" class="link link-animation">SVG файлы</a>. В&#160;папке <code>favicons</code> хранятся <code>favicon.svg</code> и&#160;<code
+								>apple-touch-icon.png</code
+							>
+							(для устройств Apple). Для остальных картинок создаются отдельные папки.
+						</li>
+						<li>
+							<code>js</code>&#160;&#8212; для JavaScript файлов. В&#160;подпапке <code>modules</code> хранятся модули, которые потом вручную
+							<a href="#webpack" class="link link-animation">импортируются</a> в&#160;файл <code>index.js</code>.
+						</li>
+						<li>
+							<code>scss</code>&#160;&#8212; для <a href="#scss" class="link link-animation">SCSS файлов</a>. В&#160;подпапке <code>base</code> хранятся общие файлы
+							(имеют низший приоритет), в&#160;<code>blocks</code> стили блоков (имеют высший приоритет). В&#160;файле <code>main.scss</code> никакие стили
+							не&#160;прописываются.
+						</li>
+					</ul>
+					<div class="para last">
+						Подробнее о&#160;каждой папке можно почитать перейдя по&#160;ссылкам в&#160;описании либо в&#160;разделе
+						<a href="#automatiom" class="link link-animation">Автоматизация</a>.
+					</div>
+				</section>
+				<section class="automation section-margin" id="automation">
+					<h2 class="h2">Автоматизация</h2>
+					<div class="para">
+						Заранее установленные и&#160;настроенные плагины упрощают 90% всех задач разработчика. Ниже подробно рассказно про автоматизированные процессы.
+					</div>
+					<nav class="automation__content content">
+						<h3 class="h3">Содержание</h3>
+						<ol class="content__list">
+							<li><a href="#template" class="content__item link link-animation">Шаблонизатор</a></li>
+							<li><a href="#paths" class="content__item link link-animation">Автоисправление путей</a></li>
+							<li><a href="#typograf" class="content__item link link-animation">Типограф</a></li>
+							<li><a href="#scss" class="content__item link link-animation">Компиляция SCSS</a></li>
+							<li><a href="#autoprefixer" class="content__item link link-animation">Автопрефиксер</a></li>
+							<li><a href="#sourcemaps" class="content__item link link-animation">Подсказки для стилей</a></li>
+							<li><a href="#svg" class="content__item link link-animation">Работа с&#160;SVG</a></li>
+							<li><a href="#fonts" class="content__item link link-animation">Подключение шрифтов</a></li>
+							<li><a href="#babel" class="content__item link link-animation">Транспиляция с&#160;помощью Babel</a></li>
+							<li><a href="#webpack" class="content__item link link-animation">Компиляция js&#160;модулей с&#160;помощью Webpack</a></li>
+							<li><a href="#server" class="content__item link link-animation">Сервер</a></li>
+							<li><a href="#images" class="content__item link link-animation">Оптимизация изображений</a></li>
+							<li><a href="#webp" class="content__item link link-animation">Поддержка WebP и&#160;Retina-дисплеев</a></li>
+							<li><a href="#minification" class="content__item link link-animation">Минификация файлов разработки</a></li>
+						</ol>
+					</nav>
+					<section class="automation__template template section-mini-margin" id="template">
+						<h3 class="h3">Шаблонизатор</h3>
+						<div class="para">
+							Плагин <code>gulp-file-include</code> собирает HTML файл <code>index.html</code> из&#160;файлов блоков. Для подключения такого блока необходимо создать
+							новый HTML файл в&#160;папке <code>./html/blocks/</code> и&#160;подключить его с&#160;помощью конструкции:
+						</div>
+						<pre class="code">&#64;&#64;include("./blocks/имя-файла.html")</pre>
+						<div class="para last">В&#160;папке <code>blocks</code> можно создавать подпапки для более сложных проектов.</div>
+					</section>
+					<section class="paths section-margin" id="paths">
+						<h3 class="h3">Автоисправление путей</h3>
+						<div class="para last">
+							Плагин <code>gulp-replace</code> позволяет пользоваться подсказками редактора во&#160;время подключения файлов. То&#160;есть все пути к&#160;файлам можно
+							прописывать исходя из&#160;структуры папки <code>src</code>.
+						</div>
+					</section>
+					<section class="typograf section-margin" id="typograf">
+						<h3 class="h3">Типограф</h3>
+						<div class="para">
+							Плагин <code>gulp-typograf</code> обеспечивает хорошую читаемость текста на&#160;сайте. Он&#160;добавляет символы неразрывного пробела между короткими
+							словами. Благодаря этому короткие слова не&#160;переносятся на&#160;новую строку без более длинных слов, что улучшает связность и&#160;читаемость текста.
+							Работает для русского и&#160;английского языков. Ещё он&#160;заменяет прочие символы на&#160;их&#160;коды для безопасности и&#160;построения
+							семантически-правильного кода. Например, текст на&#160;странице:
+						</div>
+						<div class="para example">
+							&#171;Вы&#160;мыш?&#187;&#160;&#8212; спросили коты, обступив мистера Мыша.<br />
+							&#171;Я&#160;болбше не&#160;буду&#187;,&#160;&#8212; ответил Мыш.<br />
+							&#171;А&#160;болбше и&#160;не&#160;надо&#187;,&#160;&#8212; парировали коты.
+						</div>
+						<div class="para">Код после обработки выглядит следующим образом:</div>
+						<no-typography>
+							<pre class="code">
+&lt;<span class="html-element">div</span> <span class="html-class">class</span>=<span class="html-classname">"para example"</span>&gt;
+  <span class="html-symbol">&amp;#171;</span>Вы<span class="html-symbol">&amp;#160;</span>мыш?<span class="html-symbol">&amp;#187;&amp;#160;&amp;#8212;</span> спросили коты, обступив мистера Мыша.
+  <span class="html-symbol">&amp;#171;</span>Я<span class="html-symbol">&amp;#160;</span>болбше не<span class="html-symbol">&amp;#160;</span>буду<span class="html-symbol">&amp;#187;</span>,<span class="html-symbol">&amp;#160;&amp;#8212;</span> ответил Мыш.
+  <span class="html-symbol">&amp;#171;</span>А<span class="html-symbol">&amp;#160;</span>болбше и<span class="html-symbol">&amp;#160;</span>не<span class="html-symbol">&amp;#160;</span>надо<span class="html-symbol">&amp;#187;,&amp;#160;&amp;#8212;</span>парировали коты.
+&lt;/<span class="html-element">div</span>&gt;</pre>
+						</no-typography>
+					</section>
+				</section>
+			</div>
+		</main>
+		<script src="./js/index.bundle.js"></script>
+	</body>
 </html>

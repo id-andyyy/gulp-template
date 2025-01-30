@@ -1,0 +1,13 @@
+<section class="structure section-margin" id="structure">
+  <h2>Структура проекта</h2>
+  <div class="para">Проект состоит из нескольких частей. В папке <code>gulp</code> описаны таски для работы Gulp. Файлы <code>dev.js</code> и <code>fonts-dev.js</code> отвечают за таски в режиме разработки, а <code>docs.js</code> и <code>fonts-docs.js</code> - таски в режиме продакшена. Все таски запускаются из файла <code>gulpfile.js</code> в корне проекта. В файле <code>webpack.config.js</code> описаны настройки для плагина <code>webpack-stream</code></div>
+  <div class="para">Папка <code>src</code> предназначена для разработки. Она состоит из следующих подпапок:</div>
+  <ul class="list">
+    <li><code>fonts</code> - для хранения <a href="#fonts" class="link link-animation">шрифтов</a>, подключаемых без участия Google Fonts.</li>
+    <li><code>html</code> - для HTML файлов. <code>index.html</code> главный файл, в него <a href="#template" class="link link-animation">подключаются</a> файлы из подпапки <code>blocks</code>.</li>
+    <li><code>img</code> - для хранения картинок. В папку <code>svgicons</code> помещаются <a href="#svg" class="link link-animation">SVG файлы</a>. В папке <code>favicons</code> хранятся <code>favicon.svg</code> и <code>apple-touch-icon.png</code> (для устройств Apple). Для остальных картинок создаются отдельные папки.</li>
+    <li><code>js</code> - для JavaScript файлов. В подпапке <code>modules</code> хранятся модули, которые потом вручную <a href="#webpack" class="link link-animation">импортируются</a> в файл <code>index.js</code>.</li>
+    <li><code>scss</code> - для <a href="#scss" class="link link-animation">SCSS файлов</a>. В подпапке <code>base</code> хранятся общие файлы (имеют низший приоритет), в <code>blocks</code> стили блоков (имеют высший приоритет). В файле <code>main.scss</code> никакие стили не прописываются.</li>
+  </ul>
+  <div class="para last">Подробнее о каждой папке можно почитать перейдя по ссылкам в описании либо в разделе <a href="#automatiom" class="link link-animation">Автоматизация</a>.</div>
+</section>

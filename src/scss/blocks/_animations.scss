@@ -21,4 +21,8 @@
       transform: scaleX(1);
     }
   }
+
+  &:active {
+    text-decoration: underline;
+  }
 }

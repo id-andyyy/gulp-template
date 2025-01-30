@@ -1,0 +1,16 @@
+h1 {
+  font-size: adaptive-value(26, 50);
+  font-weight: 700;
+}
+
+h2 {
+  font-size: adaptive-value(24, 28);
+  font-weight: 600;
+  margin: 0 0 adaptive-value(7, 10) 0;
+}
+
+h3 {
+  font-size: adaptive-value(20, 22);
+  font-weight: 500;
+  margin: 4px 0 adaptive-value(10, 12) 0;
+}

@@ -1,0 +1,69 @@
+code {
+  background-color: var(--code-color);
+  padding: 0.2rem;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+pre.code {
+  overflow-x: auto;
+  background-color: var(--code-color);
+  padding: 1rem;
+  border-radius: 4px;
+  margin: 0 0 8px 0;
+  font-size: 1rem;
+
+  &.last {
+    margin: 0;
+  }
+}
+
+.para {
+  font-weight: 300;
+  margin: 0 0 8px 0;
+  line-height: 25px;
+
+  &.last {
+    margin: 0;
+  }
+}
+
+.example {
+  background-color: var(--code-color);
+  padding: 1rem;
+}
+
+.link {
+  color: var(--main-color);
+  display: inline-block;
+
+  &.link-animation::before {
+    background-color: var(--main-color);
+  }
+}
+
+.section-margin {
+  padding: 90px 0 0 0;
+  margin: -70px 0 0 0;
+}
+
+.section-mini-margin {
+  padding: 90px 0 0 0;
+  margin: -85px 0 0 0;
+}
+
+.html-symbol {
+  color: #cf212e;
+}
+
+.html-element {
+  color: #136329;
+}
+
+.html-class {
+  color: #0350ae;
+}
+
+.html-classname {
+  color: #093069;
+}

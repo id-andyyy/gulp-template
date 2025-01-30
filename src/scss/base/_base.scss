@@ -2,6 +2,7 @@ body {
   background-color: var(--page-bg);
   color: var(--text-color);
   font-family: var(--font-main);
+  font-weight: 300;
 }
 
 main.main {
@@ -10,48 +11,20 @@ main.main {
 
 ul.list,
 ol.list {
-  padding-left: 1.5rem;
+  padding-left: 1rem;
 }
 
 ul.list {
   li {
     list-style: disc;
     margin-bottom: 0.5rem;
+    line-height: 25px;
   }
 }
 
-ol.list li {
-  list-style: decimal;
-}
-
-code {
-  background-color: var(--code-color);
-  padding: 0.2rem;
-  border-radius: 4px;
-}
-
-h1 {
-  font-size: adaptive-value(26, 50);
-  font-weight: 600;
-}
-
-h2 {
-  font-size: adaptive-value(24, 28);
-  font-weight: 600;
-  margin: 0 0 adaptive-value(10, 15) 0;
-}
-
-h3 {
-  font-size: adaptive-value(18, 20);
-  font-weight: 600;
-  margin: 0 0 adaptive-value(10, 12);
-}
-
-.link {
-  color: var(--main-color);
-  display: inline-block;
-
-  &.link-animation::before {
-    background-color: var(--main-color);
+ol.list {
+  & li {
+    list-style: decimal;
+    line-height: 25px;
   }
 }

@@ -1,0 +1,25 @@
+.content {
+  margin: 5px 0 0 0;
+  &__list {
+    counter-reset: num;
+    margin: 0 0 0 35px;
+
+    li {
+      position: relative;
+
+      &::before {
+        content: counter(num) ".";
+        counter-increment: num;
+        color: #787878;
+        font-size: 14px;
+        position: absolute;
+        top: adaptive-value(1.5, 2.4);
+        right: calc(100% + 5px);
+      }
+    }
+  }
+
+  &__item {
+    margin: 0 0 adaptive-value(5, 7) 0;
+  }
+}

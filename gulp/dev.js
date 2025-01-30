@@ -3,6 +3,8 @@ const gulp = require("gulp");
 // HTML
 const fileInclude = require("gulp-file-include");
 const typograf = require("gulp-typograf");
+const webpRetinaHtml = require("gulp-webp-retina-html");
+const prettier = require("@bdchauvette/gulp-prettier");
 
 // SASS
 const sass = require("gulp-sass")(require("sass"));
@@ -11,6 +13,8 @@ const sourceMaps = require("gulp-sourcemaps");
 const autoprefixer = require("gulp-autoprefixer");
 
 // Images
+const imagemin = require("gulp-imagemin");
+const imageminWebp = require("imagemin-webp");
 const svgsprite = require("gulp-svg-sprite");
 
 // JS
@@ -26,6 +30,7 @@ const notify = require("gulp-notify");
 const changed = require("gulp-changed");
 const path = require("path");
 const replace = require("gulp-replace");
+const rename = require("gulp-rename");
 
 const getPlumberConfig = (title) => {
   return {
@@ -42,16 +47,21 @@ const fileIncludeConfig = {
   basepath: "@file",
 };
 
-gulp.task("html:dev", function () {
+gulp.task("html:dev", function() {
   return gulp
     .src([
       "./src/html/**/*.html",
       "!./src/html/blocks/*.html",
       "!./src/html/templates/*.html",
     ])
-    .pipe(plumber(getPlumberConfig("html:dev")))
     .pipe(changed("./build/", { hasChanged: changed.compareContents }))
+    .pipe(plumber(getPlumberConfig("html:dev")))
     .pipe(fileInclude(fileIncludeConfig))
+    .pipe(
+      replace(/<img(?:.|\n|\r)*?>/g, function(match) {
+        return match.replace(/\r?\n|\r/g, "").replace(/\s{2,}/g, " ");
+      })
+    )
     .pipe(
       replace(
         /(?<=src=|href=|srcset=)(['"])(\.(\.)?\/)*(img|images|fonts|css|scss|sass|js|files|audio|video)(\/[^\/'"]+(\/))?([^'"]*)\1/gi,
@@ -68,14 +78,32 @@ gulp.task("html:dev", function () {
         ],
       })
     )
+    .pipe(
+      webpRetinaHtml({
+        extensions: ["jpg", "jpeg", "png", "gif", "webp"],
+        retina: {
+          1: "",
+          2: "@2x",
+        },
+      })
+    )
+    .pipe(
+      prettier({
+        tabWidth: 4,
+        useTabs: true,
+        printWidth: 182,
+        trailingComma: "es5",
+        bracketSpacing: false,
+      })
+    )
     .pipe(gulp.dest("./build/"));
 });
 
-gulp.task("sass:dev", function () {
+gulp.task("sass:dev", function() {
   return gulp
     .src("./src/scss/*.scss")
-    .pipe(plumber(getPlumberConfig("sass:dev")))
     .pipe(changed("./build/css/"))
+    .pipe(plumber(getPlumberConfig("sass:dev")))
     .pipe(sourceMaps.init())
     .pipe(sassGlob())
     .pipe(sass())
@@ -90,10 +118,20 @@ gulp.task("sass:dev", function () {
     .pipe(gulp.dest("./build/css/"));
 });
 
-gulp.task("img:dev", function () {
+gulp.task("img:dev", function() {
   return gulp
-    .src(["./src/img/**/*", "!./src/img/svgicons/**/*"], { encoding: false })
-    .pipe(plumber(getPlumberConfig("img:dev")))
+    .src(["./src/img/**/*", "!./src/img/svgicons/**/*"])
+    .pipe(changed("./build/img/"))
+    .pipe(
+      imagemin([
+        imageminWebp({
+          quality: 85,
+        }),
+      ])
+    )
+    .pipe(rename({ extname: ".webp" }))
+    .pipe(gulp.dest("./build/img/"))
+    .pipe(gulp.src(["./src/img/**/*", "!./src/img/svgicons/**/*"]))
     .pipe(changed("./build/img/"))
     .pipe(gulp.dest("./build/img/"));
 });
@@ -106,7 +144,7 @@ const svgSymbol = {
   },
   shape: {
     id: {
-      generator: function (name, file) {
+      generator: function(name, file) {
         const folderName = path.basename(path.dirname(file.relative));
         const fileName = path.basename(
           file.relative,
@@ -135,7 +173,7 @@ const svgSymbol = {
   },
 };
 
-gulp.task("svg:dev", function () {
+gulp.task("svg:dev", function() {
   return gulp
     .src("./src/img/svgicons/**/*.svg")
     .pipe(plumber(plumber("svg:dev")))
@@ -143,32 +181,32 @@ gulp.task("svg:dev", function () {
     .pipe(gulp.dest("./build/img/svgsprite/"));
 });
 
-gulp.task("files:dev", function () {
+gulp.task("files:dev", function() {
   return gulp
     .src("./src/files/**/*")
-    .pipe(plumber(getPlumberConfig("files:dev")))
     .pipe(changed("./build/files/"))
+    .pipe(plumber(getPlumberConfig("files:dev")))
     .pipe(gulp.dest("./build/files/"));
 });
 
-gulp.task("js:dev", function () {
+gulp.task("js:dev", function() {
   return gulp
     .src("./src/js/*.js")
-    .pipe(plumber(getPlumberConfig("js:dev")))
     .pipe(changed("./build/js/"))
+    .pipe(plumber(getPlumberConfig("js:dev")))
     .pipe(babel())
     .pipe(webpack(require("./../webpack.config")))
     .pipe(gulp.dest("./build/js/"));
 });
 
-gulp.task("clean:dev", function (done) {
+gulp.task("clean:dev", function(done) {
   if (fs.existsSync("./build/")) {
-    return gulp.src("./build/", { read: false }).pipe(clean());
+    return gulp.src("./build/", { read: false }).pipe(clean({ force: true }));
   }
   done();
 });
 
-gulp.task("server:dev", function () {
+gulp.task("server:dev", function() {
   return gulp.src("./build/").pipe(
     server({
       livereload: true,
@@ -179,7 +217,7 @@ gulp.task("server:dev", function () {
   );
 });
 
-gulp.task("watch:dev", function () {
+gulp.task("watch:dev", function() {
   gulp.watch("./src/scss/**/*.scss", gulp.series("sass:dev"));
   gulp.watch(
     ["./src/html/**/*.html", "./src/html/**/*.json"],

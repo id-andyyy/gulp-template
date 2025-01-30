@@ -3,7 +3,6 @@ const gulp = require("gulp");
 // HTML
 const fileInclude = require("gulp-file-include");
 const typograf = require("gulp-typograf");
-const webpHtml = require("gulp-webp-html");
 const webpRetinaHtml = require("gulp-webp-retina-html");
 const htmlclean = require("gulp-htmlclean");
 
@@ -17,7 +16,6 @@ const groupMedia = require("gulp-group-css-media-queries");
 // Images
 const imagemin = require("gulp-imagemin");
 const imageminWebp = require("imagemin-webp");
-const extReplace = require("gulp-ext-replace");
 const svgsprite = require("gulp-svg-sprite");
 
 // JS
@@ -33,6 +31,7 @@ const notify = require("gulp-notify");
 const changed = require("gulp-changed");
 const path = require("path");
 const replace = require("gulp-replace");
+const rename = require("gulp-rename");
 
 const getPlumberConfig = (title) => {
   return {
@@ -49,16 +48,21 @@ const fileIncludeConfig = {
   basepath: "@file",
 };
 
-gulp.task("html:docs", function () {
+gulp.task("html:docs", function() {
   return gulp
     .src([
       "./src/html/**/*.html",
       "!./src/html/blocks/*.html",
       "!./src/html/templates/*.html",
     ])
-    .pipe(plumber(getPlumberConfig("html:docs")))
     .pipe(changed("./docs/"))
+    .pipe(plumber(getPlumberConfig("html:docs")))
     .pipe(fileInclude(fileIncludeConfig))
+    .pipe(
+      replace(/<img(?:.|\n|\r)*?>/g, function(match) {
+        return match.replace(/\r?\n|\r/g, "").replace(/\s{2,}/g, " ");
+      })
+    )
     .pipe(
       replace(
         /(?<=src=|href=|srcset=)(['"])(\.(\.)?\/)*(img|images|fonts|css|scss|sass|js|files|audio|video)(\/[^\/'"]+(\/))?([^'"]*)\1/gi,
@@ -84,31 +88,30 @@ gulp.task("html:docs", function () {
         },
       })
     )
-    .pipe(webpHtml())
     .pipe(htmlclean())
     .pipe(gulp.dest("./docs/"));
 });
 
-gulp.task("sass:docs", function () {
+gulp.task("sass:docs", function() {
   return gulp
     .src("./src/scss/*.scss")
-    .pipe(plumber(getPlumberConfig("sass:docs")))
     .pipe(changed("./docs/css/"))
+    .pipe(plumber(getPlumberConfig("sass:docs")))
     .pipe(sassGlob())
-    .pipe(groupMedia())
     .pipe(sass())
+    .pipe(autoprefixer())
+    .pipe(groupMedia())
     .pipe(
       replace(
         /(['"]?)(\.\.\/)+(img|images|fonts|css|scss|sass|js|files|audio|video)(\/[^\/'"]+(\/))?([^'"]*)\1/gi,
         "$1$2$3$4$6$1"
       )
     )
-    .pipe(autoprefixer())
     .pipe(csso())
     .pipe(gulp.dest("./docs/css/"));
 });
 
-gulp.task("img:docs", function () {
+gulp.task("img:docs", function() {
   return gulp
     .src(["./src/img/**/*", "!./src/img/svgicons/**/*"])
     .pipe(changed("./docs/img/"))
@@ -119,7 +122,7 @@ gulp.task("img:docs", function () {
         }),
       ])
     )
-    .pipe(extReplace(".webp"))
+    .pipe(rename({ extname: ".webp" }))
     .pipe(gulp.dest("./docs/img/"))
     .pipe(gulp.src("./src/img/**/*"))
     .pipe(changed("./docs/img/"))
@@ -144,7 +147,7 @@ const svgSymbol = {
   },
   shape: {
     id: {
-      generator: function (name, file) {
+      generator: function(name, file) {
         const folderName = path.basename(path.dirname(file.relative));
         const fileName = path.basename(
           file.relative,
@@ -173,7 +176,7 @@ const svgSymbol = {
   },
 };
 
-gulp.task("svg:docs", function () {
+gulp.task("svg:docs", function() {
   return gulp
     .src("./src/img/svgicons/**/*.svg")
     .pipe(plumber(plumber("svg:docs")))
@@ -181,31 +184,31 @@ gulp.task("svg:docs", function () {
     .pipe(gulp.dest("./docs/img/svgsprite/"));
 });
 
-gulp.task("files:docs", function () {
+gulp.task("files:docs", function() {
   return gulp
     .src("./src/files/**/*")
     .pipe(changed("./docs/files/"))
     .pipe(gulp.dest("./docs/files/"));
 });
 
-gulp.task("js:docs", function () {
+gulp.task("js:docs", function() {
   return gulp
     .src("./src/js/*.js")
-    .pipe(plumber(getPlumberConfig("js:docs")))
     .pipe(changed("./docs/js/"))
+    .pipe(plumber(getPlumberConfig("js:docs")))
     .pipe(babel())
     .pipe(webpack(require("../webpack.config")))
     .pipe(gulp.dest("./docs/js/"));
 });
 
-gulp.task("clean:docs", function (done) {
+gulp.task("clean:docs", function(done) {
   if (fs.existsSync("./docs/")) {
-    return gulp.src("./docs", { read: false }).pipe(clean());
+    return gulp.src("./docs", { read: false }).pipe(clean({ force: true }));
   }
   done();
 });
 
-gulp.task("server:docs", function () {
+gulp.task("server:docs", function() {
   return gulp.src("./docs").pipe(
     server({
       livereload: true,

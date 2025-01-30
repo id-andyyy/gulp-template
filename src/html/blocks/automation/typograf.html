@@ -1,0 +1,18 @@
+<section class="typograf section-margin" id="typograf">
+  <h3 class="h3">Типограф</h3>
+  <div class="para">Плагин <code>gulp-typograf</code> обеспечивает хорошую читаемость текста на сайте. Он добавляет символы неразрывного пробела между короткими словами. Благодаря этому короткие слова не переносятся на новую строку без более длинных слов, что улучшает связность и читаемость текста. Работает для русского и английского языков. Ещё он заменяет прочие символы на их коды для безопасности и построения семантически-правильного кода. Например, текст на странице:</div>
+  <div class="para example">
+    «Вы мыш?» — спросили коты, обступив мистера Мыша.<br>
+    «Я болбше не буду», — ответил Мыш.<br>
+    «А болбше и не надо», — парировали коты.
+  </div>
+  <div class="para">Код после обработки выглядит следующим образом:</div>
+  <no-typography>  
+  <pre class="code">
+&lt;<span class="html-element">div</span> <span class="html-class">class</span>=<span class="html-classname">"para example"</span>&gt;
+  <span class="html-symbol">&amp;#171;</span>Вы<span class="html-symbol">&amp;#160;</span>мыш?<span class="html-symbol">&amp;#187;&amp;#160;&amp;#8212;</span> спросили коты, обступив мистера Мыша.
+  <span class="html-symbol">&amp;#171;</span>Я<span class="html-symbol">&amp;#160;</span>болбше не<span class="html-symbol">&amp;#160;</span>буду<span class="html-symbol">&amp;#187;</span>,<span class="html-symbol">&amp;#160;&amp;#8212;</span> ответил Мыш.
+  <span class="html-symbol">&amp;#171;</span>А<span class="html-symbol">&amp;#160;</span>болбше и<span class="html-symbol">&amp;#160;</span>не<span class="html-symbol">&amp;#160;</span>надо<span class="html-symbol">&amp;#187;,&amp;#160;&amp;#8212;</span>парировали коты.
+&lt;/<span class="html-element">div</span>&gt;</pre>
+  </no-typography>
+</section>
