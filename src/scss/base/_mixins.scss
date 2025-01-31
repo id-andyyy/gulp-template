@@ -41,3 +41,15 @@
     @content;
   }
 }
+
+@mixin mouse-hover($is-mouse: true) {
+  @if $is-mouse {
+    @media not (any-pointer: coarse) {
+      @content;
+    }
+  } @else {
+    @media (any-pointer: coarse) {
+      @content;
+    }
+  }
+}

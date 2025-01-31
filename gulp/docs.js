@@ -52,8 +52,8 @@ gulp.task("html:docs", function() {
   return gulp
     .src([
       "./src/html/**/*.html",
-      "!./src/html/blocks/*.html",
-      "!./src/html/templates/*.html",
+      "!./**/blocks/**/*.*",
+      "!./src/html/docs/**/*.*",
     ])
     .pipe(changed("./docs/"))
     .pipe(plumber(getPlumberConfig("html:docs")))

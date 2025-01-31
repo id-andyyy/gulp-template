@@ -51,8 +51,8 @@ gulp.task("html:dev", function() {
   return gulp
     .src([
       "./src/html/**/*.html",
-      "!./src/html/blocks/*.html",
-      "!./src/html/templates/*.html",
+      "!./**/blocks/**/*.*",
+      "!./src/html/docs/**/*.*",
     ])
     .pipe(changed("./build/", { hasChanged: changed.compareContents }))
     .pipe(plumber(getPlumberConfig("html:dev")))
@@ -122,13 +122,6 @@ gulp.task("img:dev", function() {
   return gulp
     .src(["./src/img/**/*", "!./src/img/svgicons/**/*"])
     .pipe(changed("./build/img/"))
-    .pipe(
-      imagemin([
-        imageminWebp({
-          quality: 85,
-        }),
-      ])
-    )
     .pipe(rename({ extname: ".webp" }))
     .pipe(gulp.dest("./build/img/"))
     .pipe(gulp.src(["./src/img/**/*", "!./src/img/svgicons/**/*"]))

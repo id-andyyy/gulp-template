@@ -28,9 +28,11 @@
 									<li class="menu-list__item"><a href="#start" class="menu-list__link link-animation">Начало работы</a></li>
 									<li class="menu-list__item"><a href="#structure" class="menu-list__link link-animation">Структура</a></li>
 									<li class="menu-list__item"><a href="#automation" class="menu-list__link link-animation">Автоматизация</a></li>
-									<li class="menu-list__item"><a href="#classes" class="menu-list__link link-animation">Готовые классы</a></li>
+									<li class="menu-list__item"><a href="#sass" class="menu-list__link link-animation">SCSS</a></li>
 									<li class="menu-list__item"><a href="#components" class="menu-list__link link-animation">Компоненты</a></li>
-									<li class="menu-list__item"><a href="#feedback" class="menu-list__link link-animation">Обратная связь</a></li>
+									<li class="menu-list__item"><a href="#snippets" class="menu-list__link link-animation">Сниппеты</a></li>
+									<li class="menu-list__item"><a href="#feedback" class="menu-list__link link-animation">Ошибки</a></li>
+									<li class="menu-list__item"><a href="#feedback" class="menu-list__link link-animation">Фидбэк</a></li>
 								</ul>
 							</div>
 						</nav>
@@ -138,11 +140,11 @@
 							<li><a href="#svg" class="content__item link link-animation">Работа с&#160;SVG</a></li>
 							<li><a href="#fonts" class="content__item link link-animation">Подключение шрифтов</a></li>
 							<li><a href="#babel" class="content__item link link-animation">Транспиляция с&#160;помощью Babel</a></li>
-							<li><a href="#webpack" class="content__item link link-animation">Компиляция js&#160;модулей с&#160;помощью Webpack</a></li>
+							<li><a href="#webpack" class="content__item link link-animation">Компиляция JS&#160;модулей с&#160;помощью Webpack</a></li>
 							<li><a href="#server" class="content__item link link-animation">Сервер</a></li>
 							<li><a href="#images" class="content__item link link-animation">Оптимизация изображений</a></li>
-							<li><a href="#webp" class="content__item link link-animation">Поддержка WebP и&#160;Retina-дисплеев</a></li>
-							<li><a href="#minification" class="content__item link link-animation">Минификация файлов разработки</a></li>
+							<li><a href="#webp" class="content__item link link-animation">Поддержка WebP и&#160;Retina</a></li>
+							<li><a href="#minification" class="content__item link link-animation">Минификация файлов</a></li>
 						</ol>
 					</nav>
 					<section class="automation__template template section-mini-margin" id="template">
@@ -154,14 +156,14 @@
 						<pre class="code">&#64;&#64;include("./blocks/имя-файла.html")</pre>
 						<div class="para last">В&#160;папке <code>blocks</code> можно создавать подпапки для более сложных проектов.</div>
 					</section>
-					<section class="paths section-margin" id="paths">
+					<section class="paths section-mini-margin" id="paths">
 						<h3 class="h3">Автоисправление путей</h3>
 						<div class="para last">
 							Плагин <code>gulp-replace</code> позволяет пользоваться подсказками редактора во&#160;время подключения файлов. То&#160;есть все пути к&#160;файлам можно
 							прописывать исходя из&#160;структуры папки <code>src</code>.
 						</div>
 					</section>
-					<section class="typograf section-margin" id="typograf">
+					<section class="typograf section-mini-margin" id="typograf">
 						<h3 class="h3">Типограф</h3>
 						<div class="para">
 							Плагин <code>gulp-typograf</code> обеспечивает хорошую читаемость текста на&#160;сайте. Он&#160;добавляет символы неразрывного пробела между короткими
@@ -184,11 +186,10 @@
 &lt;/<span class="html-element">div</span>&gt;</pre>
 						</no-typography>
 						<div class="para last">
-							Если нужно, чтобы часть текста не&#160;была обработана, необходимо заключить её&#160;в&#160;тег <code>&lt;pre&gt;&lt;/pre&gt;</code> или тег
-							<code>&lt;no-typography&gt;&lt;/no-typography&gt;</code>.
+							Если нужно, чтобы часть текста не&#160;была обработана, необходимо заключить её&#160;в&#160;тег <code>&lt;no-typography&gt;&lt;/no-typography&gt;</code>.
 						</div>
 					</section>
-					<section class="scss section-margin" id="scss">
+					<section class="scss section-mini-margin" id="scss">
 						<h3 class="h3">Компиляция SCSS</h3>
 						<div class="para">
 							Плагин <code>gulp-sass</code> обеспечивает перевод SCSS кода в&#160;CSS код. Плагин <code>gulp-sass-glob</code> позволяет подключать SCSS файлы друг
@@ -204,7 +205,7 @@
 								<code>_fonts-autogen.scss</code>&#160;&#8212; файл генерируется автоматически при каждой сборке. Содержит стили для подключения
 								<a href="#fonts" class="link link-animation">шрифтов</a>.
 							</li>
-							<li><code>_icons.scss</code>&#160;&#8212; стили для <a href="#svg">SVG иконок</a> (цвет и&#160;размер).</li>
+							<li><code>_icons.scss</code>&#160;&#8212; стили для <a href="#svg" class="link link-animation">SVG иконок</a> (цвет и&#160;размер).</li>
 							<li><code>_mixins.scss</code>&#160;&#8212; <a href="#mixins" class="link link-animation">миксины и&#160;функции</a> для адаптивности и&#160;картинок.</li>
 							<li><code>_nullstyle.scss</code>&#160;&#8212; <a href="#nullstyle" class="link link-animation">обнуляющий стиль</a>.</li>
 							<li>
@@ -221,7 +222,7 @@
 							<code>about.html</code>, то&#160;стили для этого блока будут описаны в&#160;файле <code>about.scss</code>.
 						</div>
 					</section>
-					<section class="autoprefixer section-margin" id="autoprefixer">
+					<section class="autoprefixer section-mini-margin" id="autoprefixer">
 						<h3 class="h3">Автопрефиксер</h3>
 						<div class="para">
 							Плагин <code>gulp-autoprefixer</code> автоматически добавляет вендорные префиксы к&#160;CSS-свойствам, чтобы обеспечить кросс-браузерную совместимость.
@@ -231,7 +232,7 @@
 <span class="css-props">.menu-list {
   display</span>: <span class="css-props">flex</span>;
   <span class="css-props">column-gap</span>: <span class="css-props">22</span><span class="css-units">px</span>;
-}</pre>
+<span class="css-props">}</span></pre>
 						<div class="para">После обработки будут выглядеть так:</div>
 						<pre class="code">
 <span class="css-props">.menu-list {
@@ -241,10 +242,234 @@
   <span class="css-props">-webkit-column-gap</span>: <span class="css-props">22</span><span class="css-units">px</span>;
   <span class="css-props">-moz-column-gap</span>: <span class="css-props">22</span><span class="css-units">px</span>;
   <span class="css-props">column-gap</span>: <span class="css-props">22</span><span class="css-units">px</span>;
-}</pre>
+<span class="css-props">}</span></pre>
+					</section>
+					<section class="sourcemaps section-mini-margin" id="sourcemaps">
+						<h3 class="h3">Подсказки для стилей</h3>
+						<div class="para">
+							Плагин <code>gulp-sourcemaps</code> используется для создания source maps в&#160;процессе сборки проекта. Source maps&#160;&#8212; это специальный
+							синтаксис, который связывают транспилированный код (например, минифицированный CSS или JavaScript) с&#160;его исходным кодом. Это позволяет видеть
+							и&#160;работать с&#160;оригинальным кодом, даже если в&#160;браузере выполняется его обработанная версия. Пример:
+						</div>
+						<picture>
+							<source srcset="./img/examples/sourcemaps.webp 1x, ./img/examples/sourcemaps@2x.webp 2x" type="image/webp" />
+							<source srcset="./img/examples/sourcemaps.png 1x, ./img/examples/sourcemaps@2x.png 2x" type="image/png" />
+							<img src="./img/examples/sourcemaps.png" alt="Пример работы плагина gulp-sourcemaps" class="image-example" />
+						</picture>
+						<div class="para last">
+							Справа от&#160;стилей есть упоминание файла и&#160;номера строки, где описываются данные свойства. Например, <code>_text.scss:45</code>.
+						</div>
+					</section>
+					<section class="svg section-mini-margin" id="svg">
+						<h3 class="h3">Работа с&#160;SVG</h3>
+						<div class="para">
+							Для добавления иконки в&#160;проект, необходимо поместить SVG файл в&#160;папку <code>./src/img/svgicons</code>. Для использования иконки в&#160;каком-то
+							месте, необходимо использовать <a href="#snippets" class="link link-animation">сниппет</a> <code>svgIcon</code>, после чего на&#160;место заглушки
+							<code>example</code> написать название необходимого файла.
+						</div>
+						<pre class="code">
+&lt;<span class="html-element">svg</span> <span class="html-class">class</span>=<span class="html-classname">"icon icon_example"</span>&gt;
+  &lt;<span class="html-element">use</span> <span class="html-class">href</span>=<span class="html-classname">"./img/svgsprite/sprite.symbol.svg#example"</span>&gt;&lt;/<span class="html-element">use</span>&gt;
+&lt;/<span class="html-element">svg</span>&gt;</pre>
+						<div class="para">
+							Для добавления иконки цвета и&#160;размера, необходимо прописать следующие стили (можно использовать SCSS синтаксис) в&#160;файле
+							<code>_icons.scss</code>, который находится в&#160;папке <code>./src/scss/base</code>:
+						</div>
+						<pre class="code last">
+<span class="css-props">icon_example {
+  fill</span>: <span class="css-props">#6600ff</span>;
+  <span class="css-props">width</span>: <span class="css-props">100</span><span class="css-units">px</span>;
+  <span class="css-props">height</span>: <span class="css-props">50</span><span class="css-units">px</span>;
+<span class="css-props">}</span></pre>
+					</section>
+					<section class="fonts section-mini-margin" id="fonts">
+						<h3 class="h3">Подключение шрифтов</h3>
+						<div class="para">
+							Подключения шрифтов с&#160;помощью Google Fonts производится в&#160;файле <code>_base.scss</code> папки <code>./src/scss/base</code>. Рекомендуется
+							использовать плагин
+							<a href="https://marketplace.visualstudio.com/items?itemName=lior-chamla.google-fonts" class="link link-animation" target="_blank">Google Fonts</a>
+							в&#160;VS&#160;Code.
+						</div>
+						<div class="para last">
+							Для подключения шрифтов локально, необходимо поместить файлы шрифтов формата <code>otf</code> или <code>ttf</code> в&#160;папку <code>./src/fonts</code>.
+							Плагины автоматически сконвертируют шрифты в&#160;нужный формат и&#160;добавит в&#160;проект. Кроме того, в&#160;папке
+							<code>./src/scss/base</code> сгенерируется файл <code>_fonts-autogen.scss</code>, в&#160;котором все шрифты автоматически подключатся. Никакие стили
+							в&#160;этом файле больше писать нельзя, так как он&#160;генерируется заново каждый новый билд. Дальшейшее использование шрифтов осуществляется
+							с&#160;помощью свойства <code>font-family</code>.
+						</div>
+					</section>
+					<section class="babel section-mini-margin" id="babel">
+						<h3 class="h3">Транспиляция с&#160;помощью Babel</h3>
+						<div class="para last">
+							Плагин <code>gulp-babel</code> используется для транспиляции JavaScript кода, написанного с&#160;использованием современных стандартов ECMAScript
+							(например, ES6, ES7 и&#160;выше), в&#160;более старую версию JavaScript (например, ES5), которая поддерживается большинством браузеров. Весь написанный
+							разработчиком код автоматически транспилируется и&#160;попадает в&#160;файл index.js папки <code>build</code>.
+						</div>
+					</section>
+					<section class="webpack section-mini-margin" id="webpack">
+						<h3 class="h3">Компиляция JS&#160;модулей с&#160;помощью Webpack</h3>
+						<div class="para last">
+							Плагин <code>webpack-stream</code> позволяет интегрировать Webpack. С&#160;помощью Webpack происходит
+							<a href="#minification" class="link link-animation">минификация</a> JS&#160;кода, встроенные оптимизации, обработка импортируемых CSS файлов. В&#160;итоге
+							формируется файл <code>index.bundle.js</code>. Настройки плагина описаны в&#160;файле <code>webpack.config.js</code> в&#160;корне проекта.
+						</div>
+					</section>
+					<section class="server section-mini-margin" id="server">
+						<h3 class="h3">Сервер</h3>
+						<div class="para">
+							Плагин <code>gulp-server-livereload</code> используется для запуска локального сервера с&#160;функцией автообновления. Он&#160;позволяет автоматически
+							обновлять страницу в&#160;браузере при изменении файлов в&#160;проекте в&#160;режиме разработки. Плагин работает автоматически и&#160;не&#160;требует
+							ручного управления.
+						</div>
+						<div class="para last">
+							Настройки плагина можно изменить в&#160;файлах <code>dev.js</code> и&#160;<code>docs.js</code> в&#160;папке <code>gulp</code>, а&#160;именно в&#160;тасках
+							<code>server:dev</code> и&#160;<code>server:docs</code> соответственно. По&#160;умолчанию установлен хост 0.0.0.0 и&#160;порт 8000. Это позволяет
+							открывать сайт не&#160;только на&#160;компьютере разработчика, но&#160;и&#160;на&#160;любом устройстве при вводе в&#160;адресной строке
+							<code>ip_адрес_компьютера:порт</code>.
+						</div>
+					</section>
+					<section class="images section-mini-margin" id="images">
+						<h3 class="h3">Оптимизация изображений</h3>
+						<div class="para">
+							В&#160;режиме продакшена все картинки сжимаются без потери качества. В&#160;режими разработки для ускорения сборки проекта, этот шаг пропускается.
+						</div>
+					</section>
+					<section class="webp section-mini-margin" id="webp">
+						<h3 class="h3">Поддержка WebP и&#160;Retina</h3>
+						<div class="para">
+							Для корректной работы, каждая картинка должна существовать в&#160;двух экземплярах: <code>имя.формат</code> для обычных дисплеев и&#160;<code
+								>имя@2x.формат</code
+							>
+							для Retina дисплеев. Если один из&#160;файлов будет не&#160;найден, картинка отображаться не&#160;будет (ошибки вызвано не&#160;будет). При этом
+							в&#160;атрибуте <code>src</code> тега <code>img</code> подключается картинка без постфикса <code>@2x</code>
+						</div>
+						<div class="para">
+							Каждая картинка конвертируется в&#160;формат WebP для более быстрой загрузки в&#160;браузере. При этом HTML код дополняется необходимыми тегами. Например,
+							исходный код выглядит так:
+						</div>
+						<pre class="code">
+&lt;<span class="html-element">img</span> <span class="html-class">src</span>=<span class="html-classname">"./../img/image.png"</span> <span class="html-class">alt</span>=<span class="html-classname">"Пример"</span>&gt;</pre>
+						<div class="para">Код после обработки будет выглядеть следующим образом:</div>
+						<pre class="code last">
+&lt;<span class="html-element">picture</span>&gt;
+  &lt;<span class="html-element">source</span> <span class="html-class">srcset</span>=<span class="html-classname">"./img/image.webp 1x, ./img/image@2x.webp 2x"</span> <span class="html-class">type</span>=<span class="html-classname">"image/webp"</span> /&gt;
+  &lt;<span class="html-element">source</span> <span class="html-class">srcset</span>=<span class="html-classname">"./img/image.png 1x, ./img/image@2x.png 2x"</span> <span class="html-class">type</span>=<span class="html-classname">"image/png"</span> /&gt;
+  &lt;<span class="html-element">img</span> <span class="html-class">src</span>=<span class="html-classname">"./img/image.png"</span> <span class="html-class">alt</span>=<span class="html-classname">"Пример"</span> /&gt;
+&lt;/<span class="html-element">picture</span>&gt;</pre>
+					</section>
+					<section class="minification section-mini-margin" id="minification">
+						<h3 class="h3">Минификация файлов</h3>
+						<div class="para last">
+							Файлы HTML и&#160;CSS в&#160;режими продакшена минифицированы для уменьшения объёма. Из&#160;них убраны лишние пробелы и&#160;переносы строк. JavaScript
+							файлы минифицируются особым образом с&#160;использованием <a href="#webpack" class="link link-animation">Webpack</a>.
+						</div>
 					</section>
 				</section>
 			</div>
+			<section class="sass section-margin" id="sass">
+				<div class="container">
+					<h2 class="h2">Готовые структуры в&#160;SCSS</h2>
+					<div class="para last">SCSS файлы в&#160;папке <code>./src/scss/base</code> содержат ряд готовых решений для различных ситуаций.</div>
+					<nav class="automation__content content">
+						<h3 class="h3">Содержание</h3>
+						<ol class="content__list">
+							<li><a href="#classes" class="content__item link link-animation">Классы</a></li>
+							<li><a href="#animations" class="content__item link link-animation">Анимации</a></li>
+							<li><a href="#containers" class="content__item link link-animation">Контейнеры</a></li>
+							<li><a href="#mixins" class="content__item link link-animation">Миксины</a></li>
+							<li><a href="#functions" class="content__item link link-animation">Функции</a></li>
+							<li><a href="#vars" class="content__item link link-animation">Переменные</a></li>
+						</ol>
+					</nav>
+					<section class="classes section-mini-margin" id="classes">
+						<h3 class="h3">Готовые классы</h3>
+						<div class="para">Для переиспользования и&#160;быстрого использования созданы следующие классы (по&#160;желанию их&#160;можно удалить или переделать):</div>
+						<ul class="list">
+							<li>
+								Класс <code>"main"</code> для элемента <code>main</code>&#160;&#8212; добавляет отступ сверху для корректного отображения шапки
+								(<code>_base.scss</code>).
+							</li>
+							<li>Класс <code>"list"</code> для элементов <code>ul</code> и&#160;<code>ol</code> возвращают маркеры и&#160;нумерацию (<code>_base.html</code>).</li>
+							<li>Класс <code>"none"</code> скрывает элемент без следа (<code>_utils.scss</code>).</li>
+							<li>
+								Класс <code>"visually-hidden"</code> скрывает элемент без следа, но&#160;оставляет его доступным для поисковых роботов и&#160;прочих утилит, способных
+								читать HTML код страницы (<code>_utils.scss</code>).
+							</li>
+							<li>
+								Класс <code>".no-scroll"</code> скрывает контент, который выходит за&#160;границы элемента по&#160;вертикали, и&#160;предотвращает появление
+								вертикальной полосы прокрутки (<code>_utils.scss</code>).
+							</li>
+							<li>Класс <code>"text-left"</code> центрирует содержимое по&#160;левому краю (<code>_utils.scss</code>).</li>
+							<li>Класс <code>"text-right"</code> центрирует содержимое по&#160;правому краю (<code>_utils.scss</code>).</li>
+							<li>Класс <code>"text-center"</code> центрирует содержимое по&#160;центру краю (<code>_utils.scss</code>).</li>
+							<li>Класс <code>"d-flex"</code> добавляет свойство <code>display: flex</code> (<code>_utils.scss</code>).</li>
+							<li>Класс <code>"flex-center"</code> добавляет свойство <code>justify-content: center</code> (<code>_utils.scss</code>).</li>
+						</ul>
+					</section>
+					<section class="animations section-mini-margin" id="animations">
+						<h3 class="h3">Готовые анимации</h3>
+						<div class="para">
+							Для удобства созданы некоторые анимации. Все они находятся в&#160;файле <code>_animations.scss</code> в&#160;папке <code>./src/scss/base</code>.
+						</div>
+						<ul class="list">
+							<li>
+								Класс <code>"link-animation"</code> добавляет динамичное подчеркивание при наведении на&#160;устройствах с&#160;мышкой и&#160;кратковременное
+								подчеркивание при нажатии на&#160;устройствах с&#160;сенсорным управлением, <span class="link link-animation">примерно вот так</span>.
+							</li>
+							<li>
+								Класс <code>"page-animation"</code> служит основой для анимации появления блоков сайта или всей страницы. Требует дополнительных классов (указаны
+								ниже).
+							</li>
+							<li>Класс <code>"page-animation-right"</code>&#160;&#8212; блок движется вправо.</li>
+							<li>Класс <code>"page-animation-left"</code>&#160;&#8212; блок движется влево.</li>
+							<li>Класс <code>"page-animation-up"</code>&#160;&#8212; блок движется вверх.</li>
+							<li>Класс <code>"page-animation-down"</code>&#160;&#8212; блок движется вниз.</li>
+							<li>Класс <code>"_is-page-animated"</code> является служебным и&#160;появляется в&#160;момент завершения анимации.</li>
+						</ul>
+						<div class="para last">Работу анимаций обеспечивает файл <code>animations.js</code> в&#160;папке <code>./src/js/modules</code>.</div>
+					</section>
+				</div>
+				<section class="containers section-mini-margin" id="containers">
+					<div class="container">
+						<h3 class="h3">Готовые контейнеры</h3>
+						<div class="para">
+							Для различного размещения контента созданы готовые контейнеры. Свойства описаны в&#160;файле <code>_containers.scss</code> в&#160;папке
+							<code>./src/scss/base</code>.
+						</div>
+					</div>
+					<div class="container">
+						<div class="example text-margin">container</div>
+					</div>
+					<div class="container-full">
+						<div class="example text-margin">container-full</div>
+					</div>
+					<div class="container-left-50">
+						<div class="example text-margin">container-left-50</div>
+					</div>
+					<div class="container-right-50">
+						<div class="example text-margin">container-right-50</div>
+					</div>
+					<div class="container-right">
+						<div class="example text-margin">container-right</div>
+					</div>
+					<div class="container-left">
+						<div class="example text-margin">container-left</div>
+					</div>
+					<div class="container-half-left">
+						<div class="example text-margin">container-half-left</div>
+					</div>
+					<div class="container-half-right">
+						<div class="example text-margin">container-half-right</div>
+					</div>
+				</section>
+				<div class="container">
+					<section class="mixins section-margin" id="mixins">
+						<h3 class="h3">Готовые миксины</h3>
+						<div class="para"></div>
+					</section>
+				</div>
+			</section>
+			<div class="container"></div>
 		</main>
 		<script src="./js/index.bundle.js"></script>
 	</body>

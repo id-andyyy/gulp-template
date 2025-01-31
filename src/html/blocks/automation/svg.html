@@ -1,0 +1,15 @@
+<section class="svg section-mini-margin" id="svg">
+  <h3 class="h3">Работа с SVG</h3>
+  <div class="para">Для добавления иконки в проект, необходимо поместить SVG файл в папку <code>./src/img/svgicons</code>. Для использования иконки в каком-то месте, необходимо использовать <a href="#snippets" class="link link-animation">сниппет</a> <code>svgIcon</code>, после чего на место заглушки <code>example</code> написать название необходимого файла.</div>
+  <pre class="code">
+&lt;<span class="html-element">svg</span> <span class="html-class">class</span>=<span class="html-classname">"icon icon_example"</span>&gt;
+  &lt;<span class="html-element">use</span> <span class="html-class">href</span>=<span class="html-classname">"./img/svgsprite/sprite.symbol.svg#example"</span>&gt;&lt;/<span class="html-element">use</span>&gt;
+&lt;/<span class="html-element">svg</span>&gt;</pre>
+  <div class="para">Для добавления иконки цвета и размера, необходимо прописать следующие стили (можно использовать SCSS синтаксис) в файле <code>_icons.scss</code>, который находится в папке <code>./src/scss/base</code>:</div>
+  <pre class="code last">
+<span class="css-props">icon_example {
+  fill</span>: <span class="css-props">#6600ff</span>;
+  <span class="css-props">width</span>: <span class="css-props">100</span><span class="css-units">px</span>;
+  <span class="css-props">height</span>: <span class="css-props">50</span><span class="css-units">px</span>;
+<span class="css-props">}</span></pre>
+</section>

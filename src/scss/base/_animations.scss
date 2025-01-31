@@ -1,0 +1,61 @@
+.link-animation {
+  transition: all 0.3s;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1.3px;
+    background-color: var(--light-color);
+    bottom: -2.5px;
+    left: 0;
+    transform-origin: right;
+    transition: transform 0.3s ease-in-out;
+    transform: scaleX(0);
+  }
+
+  @include mouse-hover {
+    &:hover::before {
+      transform-origin: left;
+      transform: scaleX(1);
+    }
+  }
+
+  @include mouse-hover(false) {
+    &:active {
+      text-decoration: underline;
+    }
+  }
+}
+
+.page-animation {
+  opacity: 0;
+  transition:
+    transform 1.5s ease,
+    opacity 1.5s ease;
+}
+
+$page-offset: adaptive-value(40, 30);
+$page-offset-block: adaptive-value(50, 30);
+
+.page-animation-right {
+  transform: translate(calc(-1 * $page-offset), 0);
+}
+
+.page-animation-left {
+  transform: translate($page-offset, 0);
+}
+
+.page-animation-up {
+  transform: translate(0, $page-offset);
+}
+
+.page-animation-down {
+  transform: translate(0, calc(-1 * $page-offset));
+}
+
+._is-page-animated {
+  opacity: 1;
+  transform: none;
+}

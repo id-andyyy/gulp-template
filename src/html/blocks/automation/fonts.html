@@ -1,0 +1,5 @@
+<section class="fonts section-mini-margin" id="fonts">
+  <h3 class="h3">Подключение шрифтов</h3>
+  <div class="para">Подключения шрифтов с помощью Google Fonts производится в файле <code>_base.scss</code> папки <code>./src/scss/base</code>. Рекомендуется использовать плагин <a href="https://marketplace.visualstudio.com/items?itemName=lior-chamla.google-fonts" class="link link-animation" target="_blank">Google Fonts</a> в VS Code.</div>
+  <div class="para last">Для подключения шрифтов локально, необходимо поместить файлы шрифтов формата <code>otf</code> или <code>ttf</code> в папку <code>./src/fonts</code>. Плагины автоматически сконвертируют шрифты в нужный формат и добавит в проект. Кроме того, в папке <code>./src/scss/base</code> сгенерируется файл <code>_fonts-autogen.scss</code>, в котором все шрифты автоматически подключатся. Никакие стили в этом файле больше писать нельзя, так как он генерируется заново каждый новый билд. Дальшейшее использование шрифтов осуществляется с помощью свойства <code>font-family</code>.</div>
+</section>

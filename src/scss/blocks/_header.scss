@@ -151,7 +151,7 @@ body.lock {
 
 .menu-list {
   display: flex;
-  column-gap: 22px;
+  column-gap: 19px;
 
   @include tablet {
     flex-direction: column;
@@ -168,7 +168,7 @@ body.lock {
     color: var(--light-color);
 
     @include tablet {
-      font-size: 30px;
+      font-size: 25px;
       color: var(--light-color);
     }
   }

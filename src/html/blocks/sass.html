@@ -1,0 +1,23 @@
+<section class="sass section-margin" id="sass">
+  <div class="container">
+    <h2 class="h2">Готовые структуры в SCSS</h2>
+    <div class="para last">SCSS файлы в папке <code>./src/scss/base</code> содержат ряд готовых решений для различных ситуаций.</div>
+    <nav class="automation__content content">
+      <h3 class="h3">Содержание</h3>
+      <ol class="content__list">
+        <li><a href="#classes" class="content__item link link-animation">Классы</a></li>
+        <li><a href="#animations" class="content__item link link-animation">Анимации</a></li>
+        <li><a href="#containers" class="content__item link link-animation">Контейнеры</a></li>
+        <li><a href="#mixins" class="content__item link link-animation">Миксины</a></li>
+        <li><a href="#functions" class="content__item link link-animation">Функции</a></li>
+        <li><a href="#vars" class="content__item link link-animation">Переменные</a></li>
+      </ol>
+    </nav>
+    @@include("./sass/classes.html")
+    @@include("./sass/animations.html")
+  </div>
+  @@include("./sass/containers.html")
+  <div class="container">
+    @@include("./sass/mixins.html")
+  </div>
+</section>
