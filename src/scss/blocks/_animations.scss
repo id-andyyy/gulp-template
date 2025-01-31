@@ -22,7 +22,9 @@
     }
   }
 
-  &:active {
-    text-decoration: underline;
+  @media (any-pointer: coarse) {
+    &:active {
+      text-decoration: underline;
+    }
   }
 }

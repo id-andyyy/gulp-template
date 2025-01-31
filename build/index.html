@@ -183,6 +183,65 @@
   <span class="html-symbol">&amp;#171;</span>А<span class="html-symbol">&amp;#160;</span>болбше и<span class="html-symbol">&amp;#160;</span>не<span class="html-symbol">&amp;#160;</span>надо<span class="html-symbol">&amp;#187;,&amp;#160;&amp;#8212;</span>парировали коты.
 &lt;/<span class="html-element">div</span>&gt;</pre>
 						</no-typography>
+						<div class="para last">
+							Если нужно, чтобы часть текста не&#160;была обработана, необходимо заключить её&#160;в&#160;тег <code>&lt;pre&gt;&lt;/pre&gt;</code> или тег
+							<code>&lt;no-typography&gt;&lt;/no-typography&gt;</code>.
+						</div>
+					</section>
+					<section class="scss section-margin" id="scss">
+						<h3 class="h3">Компиляция SCSS</h3>
+						<div class="para">
+							Плагин <code>gulp-sass</code> обеспечивает перевод SCSS кода в&#160;CSS код. Плагин <code>gulp-sass-glob</code> позволяет подключать SCSS файлы друг
+							в&#160;друга. В&#160;папке <code>./src/scss</code> содержатся все файлы стилей. В&#160;файл <code>main.scss</code> подключаются остальные файлы. Названия
+							подключаемых файлов должны начинаться с&#160;символа <code>_</code>, например, <code>_base.scss</code>. В&#160;самом файле <code>main.scss</code> стили
+							не&#160;прописываются.
+						</div>
+						<div class="para">В&#160;папке <code>./src/scss/base</code> находятся файлы с&#160;описанием общих стилей:</div>
+						<ul class="list">
+							<li><code>_base.scss</code>&#160;&#8212; стили для элементов, которые используются во&#160;всём проекте.</li>
+							<li><code>_containers.scss</code>&#160;&#8212; стили для <a href="#containers" class="link link-animation">контейнеров</a>.</li>
+							<li>
+								<code>_fonts-autogen.scss</code>&#160;&#8212; файл генерируется автоматически при каждой сборке. Содержит стили для подключения
+								<a href="#fonts" class="link link-animation">шрифтов</a>.
+							</li>
+							<li><code>_icons.scss</code>&#160;&#8212; стили для <a href="#svg">SVG иконок</a> (цвет и&#160;размер).</li>
+							<li><code>_mixins.scss</code>&#160;&#8212; <a href="#mixins" class="link link-animation">миксины и&#160;функции</a> для адаптивности и&#160;картинок.</li>
+							<li><code>_nullstyle.scss</code>&#160;&#8212; <a href="#nullstyle" class="link link-animation">обнуляющий стиль</a>.</li>
+							<li>
+								<code>_utils.scss</code>&#160;&#8212; стили для <a href="#utils" class="link link-animation">классов</a>, которые влияют на&#160;поведение элементов
+								на&#160;странице.
+							</li>
+							<li>
+								<code>_vars.scss</code>&#160;&#8212; <a href="#vars" class="link link-animation">переменные</a>, которые используются в&#160;проекте (палитра цветов,
+								шрифты, размеры экранов).
+							</li>
+						</ul>
+						<div class="para last">
+							В&#160;папке <code>./src/scss/blocks</code> находятся файлы с&#160;описанием стилей для блоков. Например, если у&#160;нас есть HTML блок
+							<code>about.html</code>, то&#160;стили для этого блока будут описаны в&#160;файле <code>about.scss</code>.
+						</div>
+					</section>
+					<section class="autoprefixer section-margin" id="autoprefixer">
+						<h3 class="h3">Автопрефиксер</h3>
+						<div class="para">
+							Плагин <code>gulp-autoprefixer</code> автоматически добавляет вендорные префиксы к&#160;CSS-свойствам, чтобы обеспечить кросс-браузерную совместимость.
+							Например, следующие CSS свойства:
+						</div>
+						<pre class="code">
+<span class="css-props">.menu-list {
+  display</span>: <span class="css-props">flex</span>;
+  <span class="css-props">column-gap</span>: <span class="css-props">22</span><span class="css-units">px</span>;
+}</pre>
+						<div class="para">После обработки будут выглядеть так:</div>
+						<pre class="code">
+<span class="css-props">.menu-list {
+  display</span>: <span class="css-props">-webkit-box</span>;
+  <span class="css-props">display</span>: <span class="css-props">-ms-flexbox</span>;
+  <span class="css-props">display</span>: <span class="css-props">flex</span>;
+  <span class="css-props">-webkit-column-gap</span>: <span class="css-props">22</span><span class="css-units">px</span>;
+  <span class="css-props">-moz-column-gap</span>: <span class="css-props">22</span><span class="css-units">px</span>;
+  <span class="css-props">column-gap</span>: <span class="css-props">22</span><span class="css-units">px</span>;
+}</pre>
 					</section>
 				</section>
 			</div>
