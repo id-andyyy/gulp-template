@@ -1,39 +1,39 @@
 .html-symbol {
-  color: #cf212e;
+  color: var(--html-symbol);
 }
 
 .html-element {
-  color: #136329;
+  color: var(--html-element);
 }
 
 .html-class {
-  color: #0350ae;
+  color: var(--html-class);
 }
 
 .html-classname {
-  color: #093069;
+  color: var(--html-classname);
 }
 
 .css-selector {
-  color: #6f42c1;
+  color: var(--css-selector);
 }
 
 .css-props {
-  color: #0350ae;
+  color: var(--css-props);
 }
 
 .css-units {
-  color: #cf212e;
+  color: var(--html-symbol);
 }
 
 .css-brackets {
-  color: #e36208;
+  color: var(--css-brackets);
 }
 
 .css-path {
-  color: #022f62;
+  color: var(--css-path);
 }
 
 .css-comment {
-  color: #6a737d;
+  color: var(--css-comment);
 }

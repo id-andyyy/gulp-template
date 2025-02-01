@@ -3,19 +3,33 @@
   --container-width: 1200px;
   --container-padding: 20px;
 
-  // Main font
+  // Font
   --font-main: "JetBrainsMono", sans-serif;
   --font-accent: "JetBrainsMono", sans-serif;
   --font-titles: --font-accent;
 
-  // Main colors
-  --page-bg: #fff;
-  --text-color: #000;
+  // Text colors
+  --text-main: #000000;
+  --text-code: var(--text-main);
+
+  // Colors
+  --page-bg: #ffffff;
   --main-color: #df494d;
   --light-color: #ffffff;
   --modern-color: #8800ff;
-  --link-color: #2578c8;
   --code-color: #e9f1f6;
+  --link-color: #df494d;
+
+  // Syntax
+  --html-symbol: #cf212e;
+  --html-element: #136329;
+  --html-class: #0350ae;
+  --html-classname: #093069;
+  --css-selector: #6f42c1;
+  --css-props: #0350ae;
+  --css-brackets: #e36208;
+  --css-path: #022f62;
+  --css-comment: #6a737d;
 
   // Maximum dimensions
   --laptop-width: 1439px;
@@ -28,6 +42,24 @@
 }
 
 .dark {
-  --page-bg: #252526;
-  --text-color: #fff;
+  // Text colors
+  --text-main: #fff;
+  --text-code: #fff;
+
+  // Colors
+  --page-bg: #000000;
+  --main-color: #8849df;
+  --code-color: #232327;
+  --link-color: #a565ff;
+
+  // Syntax
+  --html-symbol: #79b8ff;
+  --html-element: #85e89d;
+  --html-class: #b392f0;
+  --html-classname: #9ecbff;
+  --css-selector: #ad8de7;
+  --css-props: #79b8ff;
+  --css-brackets: #ffab70;
+  --css-path: #9ecbff;
+  --css-comment: #6a737d;
 }

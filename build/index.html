@@ -9,7 +9,7 @@
 		<link rel="stylesheet" href="./css/main.css" />
 	</head>
 
-	<body>
+	<body class="dark">
 		<header class="header">
 			<div class="container">
 				<div class="header__row">
@@ -508,7 +508,7 @@
 							<a href="#vars" class="link link-animation">Переменные</a>). Все параметры должны быть числами без указания единиц измерения. На&#160;выходе функция
 							возвращает значение с&#160;единицей измерения <code>px</code>.
 						</div>
-						<pre class="code last">
+						<pre class="code">
 <span class="css-selector">.element</span> <span class="css-props">{
   width</span>: <span class="css-props">adaptive-value</span><span class="css-brackets">(</span><span class="css-props">10</span>, <span class="css-props">20</span>, <span class="css-props">300</span>, <span class="css-props">1400</span><span class="css-brackets">)</span>; <span class="css-comment">// 10px при ширине 300px и 20px при ширине 1400px</span>
 <span class="css-props">}</span></pre>
@@ -525,6 +525,43 @@
   width</span>: <span class="css-props">percentage-value</span><span class="css-brackets">(</span><span class="css-props">width</span>, <span class="css-props">640</span><span class="css-brackets">)</span>; <span class="css-comment">// 50% (640 / 1280 * 100%)</span>
   <span class="css-props">height</span>: <span class="css-props">percentage-value</span><span class="css-comment">(</span><span class="css-props">height</span>, <span class="css-props">416</span><span class="css-brackets">)</span>; <span class="css-comment">// 50% (416 / 832 * 100%)</span>
 <span class="css-props">}</span></pre>
+					</section>
+					<section class="vars section-margin" id="vars">
+						<h3 class="h3">Готовые переменные</h3>
+						<div class="para">
+							В&#160;файле <code>_vars.scss</code> папки <code>./src/scss/base</code> хранятся все переменные, которые переиспользуются в&#160;других SCSS файлах.
+						</div>
+						<div class="para">Размеры контейнера:</div>
+						<ul class="list">
+							<li><code>--container-width: 1200px</code>&#160;&#8212; максимальная ширина контейнера</li>
+							<li><code>--container-padding: 20px</code>&#160;&#8212; отступы слева и&#160;справа от&#160;контейнера</li>
+						</ul>
+						<div class="para">Шрифты:</div>
+						<ul class="list">
+							<li><code>--font-main: "JetBrainsMono", sans-serif</code>&#160;&#8212; основной шрифт</li>
+							<li><code>--font-accent: "JetBrainsMono", sans-serif</code>&#160;&#8212; акцентный шрифт</li>
+							<li><code>--font-titles: --font-accent</code>&#160;&#8212; шрифт для заголовков</li>
+						</ul>
+						<div class="para">Цвета:</div>
+						<ul class="list">
+							<li><code>--page-bg: #ffffff</code>&#160;&#8212; цвет фона страницы</li>
+							<li><code>--text-main: #000000</code>&#160;&#8212; основной цвет текста</li>
+							<li><code>--main-color: #df494d</code>&#160;&#8212; основной цвет</li>
+							<li><code>--light-color: #ffffff</code>&#160;&#8212; легкий цвет</li>
+							<li>Остальные цвета добавляются в&#160;зависимости от&#160;проекта</li>
+						</ul>
+						<div class="para">Размеры устройств:</div>
+						<ul class="list">
+							<li><code>--laptop-width: 1439px</code>&#160;&#8212; максимальный размер ноутбука</li>
+							<li><code>--tablet-width: 1023px</code>&#160;&#8212; максимальный размер планшета</li>
+							<li><code>--mobile-width: 767px</code>&#160;&#8212; максимальный размер телефона</li>
+						</ul>
+						<div class="para">Размеры макета (только числа, без единиц измерения):</div>
+						<ul class="list">
+							<li><code>--min-layout-width: 360</code>&#160;&#8212; минимальная ширина страницы по&#160;макету</li>
+							<li><code>--max-layout-width: 1280</code>&#160;&#8212; максимальная ширина страницы по&#160;макету</li>
+						</ul>
+						<div class="para last">Для изменения цветов тёмной темы используется класс <code>dark</code>.</div>
 					</section>
 				</div>
 			</section>
