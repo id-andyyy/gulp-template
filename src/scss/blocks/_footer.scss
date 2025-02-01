@@ -1,0 +1,14 @@
+.footer {
+  background-color: var(--main-color);
+  padding: adaptive-value(30, 40) 0;
+  margin: 20px 0 0 0;
+
+  &__copyright {
+    color: var(--light-color);
+    text-align: center;
+
+    a {
+      text-decoration: underline;
+    }
+  }
+}
