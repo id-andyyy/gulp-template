@@ -13,8 +13,8 @@
 		<header class="header">
 			<div class="container">
 				<div class="header__row">
-					<a href="#" class="header__logo">
-						<svg class="icon icon_gulp header__icon">
+					<a href="#about" class="header__logo">
+						<svg class="icon icon_gulp">
 							<use href="./img/svgsprite/sprite.symbol.svg#gulp"></use>
 						</svg>
 					</a>
@@ -31,9 +31,29 @@
 									<li class="menu-list__item"><a href="#sass" class="menu-list__link link-animation">SCSS</a></li>
 									<li class="menu-list__item"><a href="#components" class="menu-list__link link-animation">Компоненты</a></li>
 									<li class="menu-list__item"><a href="#snippets" class="menu-list__link link-animation">Сниппеты</a></li>
-									<li class="menu-list__item"><a href="#feedback" class="menu-list__link link-animation">Ошибки</a></li>
+									<li class="menu-list__item"><a href="#errors" class="menu-list__link link-animation">Ошибки</a></li>
 									<li class="menu-list__item"><a href="#feedback" class="menu-list__link link-animation">Фидбэк</a></li>
 								</ul>
+								<div class="menu__media media">
+									<a href="https://github.com/id-andyyy/gulp-template" target="_blank" class="media__item">
+										<svg class="icon icon_github">
+											<use href="./img/svgsprite/sprite.symbol.svg#github"></use>
+										</svg>
+									</a>
+									<a href="https://github.com/id-andyyy/gulp-template/issues" target="_blank" class="media__item">
+										<svg class="icon icon_issues">
+											<use href="./img/svgsprite/sprite.symbol.svg#issues"></use>
+										</svg>
+									</a>
+									<button class="media__item theme-switcher">
+										<svg class="icon icon_moon">
+											<use href="./img/svgsprite/sprite.symbol.svg#moon"></use>
+										</svg>
+										<svg class="icon icon_sun none">
+											<use href="./img/svgsprite/sprite.symbol.svg#sun"></use>
+										</svg>
+									</button>
+								</div>
 							</div>
 						</nav>
 					</div>
@@ -42,7 +62,7 @@
 		</header>
 		<main class="main">
 			<div class="container">
-				<section class="about section-margin">
+				<section class="about section-margin" id="about">
 					<div class="about__title title">
 						<svg class="icon icon_gulp title__icon">
 							<use href="./img/svgsprite/sprite.symbol.svg#gulp"></use>
@@ -117,6 +137,7 @@
 							(имеют низший приоритет), в&#160;<code>blocks</code> стили блоков (имеют высший приоритет). В&#160;файле <code>main.scss</code> никакие стили
 							не&#160;прописываются.
 						</li>
+						<li><code>files</code>&#160;&#8212; для хранения прочих файлов&#160;&#8212; аудио, видео и&#160;т.&#160;д. (необязательная папка).</li>
 					</ul>
 					<div class="para last">
 						Подробнее о&#160;каждой папке можно почитать перейдя по&#160;ссылкам в&#160;описании либо в&#160;разделе
@@ -305,8 +326,8 @@
 					<section class="fonts section-margin" id="fonts">
 						<h3 class="h3">Подключение шрифтов</h3>
 						<div class="para">
-							Подключения шрифтов с&#160;помощью Google Fonts производится в&#160;файле <code>_base.scss</code> папки <code>./src/scss/base</code>. Рекомендуется
-							использовать плагин
+							Подключения шрифтов из&#160;Google Fonts производится в&#160;файле <code>_base.scss</code> папки <code>./src/scss/base</code>. Рекомендуется использовать
+							плагин
 							<a href="https://marketplace.visualstudio.com/items?itemName=lior-chamla.google-fonts" class="link link-animation" target="_blank">Google Fonts</a>
 							в&#160;VS&#160;Code.
 						</div>
@@ -350,7 +371,7 @@
 					</section>
 					<section class="images section-margin" id="images">
 						<h3 class="h3">Оптимизация изображений</h3>
-						<div class="para">
+						<div class="para last">
 							В&#160;режиме продакшена все картинки сжимаются без потери качества. В&#160;режими разработки для ускорения сборки проекта, этот шаг пропускается.
 						</div>
 					</section>
@@ -597,29 +618,42 @@
 						Аккордион&#160;&#8212; файлы <code>accordion.html</code>, <code>accordion-section.html</code>, <code>accordion.json</code>,
 						<code>_accordion.scss</code> и&#160;<code>accordion.js</code>. Пример:
 					</div>
-					<div class="accordion">
-						<div class="accordion__item">
-							<button class="accordion__button">
-								<h3 class="accordion__header">Секция 1</h3>
-							</button>
-							<div class="accordion__collapse">
-								<div class="accordion__body">Содержание 1</div>
+					<div class="text-margin">
+						<div class="accordion">
+							<div class="accordion__item">
+								<button class="accordion__button">
+									<h3 class="accordion__header">10 слов</h3>
+								</button>
+								<div class="accordion__collapse">
+									<div class="accordion__body">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis, ipsa!</div>
+								</div>
 							</div>
-						</div>
-						<div class="accordion__item">
-							<button class="accordion__button">
-								<h3 class="accordion__header">Секция 2</h3>
-							</button>
-							<div class="accordion__collapse">
-								<div class="accordion__body">Содержание 2</div>
+							<div class="accordion__item">
+								<button class="accordion__button">
+									<h3 class="accordion__header">50 слов</h3>
+								</button>
+								<div class="accordion__collapse">
+									<div class="accordion__body">
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum rem nobis molestiae rerum similique numquam, tempora sapiente quam corrupti qui
+										quaerat alias excepturi deleniti quisquam deserunt blanditiis consequatur totam harum debitis placeat tenetur iure quod&#160;ex. Autem labore
+										quae sunt. Quae error magni explicabo perferendis doloribus ullam quos possimus reprehenderit?
+									</div>
+								</div>
 							</div>
-						</div>
-						<div class="accordion__item">
-							<button class="accordion__button">
-								<h3 class="accordion__header">Секция 2</h3>
-							</button>
-							<div class="accordion__collapse">
-								<div class="accordion__body">Содержание 2</div>
+							<div class="accordion__item">
+								<button class="accordion__button">
+									<h3 class="accordion__header">100 слов</h3>
+								</button>
+								<div class="accordion__collapse">
+									<div class="accordion__body">
+										Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia aperiam porro consectetur odio aliquid accusantium doloribus maxime nostrum,
+										molestias magni ratione! Voluptas, exercitationem necessitatibus maxime recusandae quae dolore et&#160;quis praesentium laudantium asperiores
+										nihil inventore minima deleniti doloremque libero quisquam dolorem ipsa ad&#160;fuga aut consectetur saepe dolor quia. Unde aliquid eveniet
+										quibusdam nisi aperiam in&#160;suscipit nostrum doloribus soluta. Voluptas eaque fugit quae ratione, libero dolorem aspernatur odit quidem
+										nostrum, molestias suscipit veritatis error. Officia reiciendis sequi nemo quas quod soluta? Sunt beatae magni eligendi, qui facere optio
+										ipsum debitis quisquam ipsam aut doloribus&#160;id? Aut assumenda magni unde.
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -640,7 +674,11 @@
 							</div>
 						</div>
 					</div>
-					<div class="para last">Текущий год&#160;&#8212; файл <code>current-year.js</code>. Скрипт поддерживает актуальный год: <span class="year"></span>.</div>
+					<div class="para">Текущий год&#160;&#8212; файл <code>current-year.js</code>. Скрипт поддерживает актуальный год: <span class="year"></span>.</div>
+					<div class="para last">
+						Смена темы&#160;&#8212; файл <code>theme.js</code>. Выбранная тема запоминается даже при обновлении страницы.
+						<button class="theme-switcher link link-animation text">Поменяйте</button> тему сами.
+					</div>
 				</section>
 				<section class="snippets section-margin" id="snippets">
 					<h2 class="h2">Сниппеты</h2>
@@ -652,8 +690,55 @@
 						<li><code>svgIcon</code>&#160;&#8212; вызывает подключение <a href="#svg" class="link link-animation">SVG файла</a></li>
 					</ul>
 				</section>
+				<section class="errors section-margin" id="errors">
+					<h2 class="h2">Ошибки</h2>
+					<div class="para">
+						Часть ошибок отлавливается и&#160;показывается в&#160;терминале. Нужно следовать инструкциям для их&#160;исправления. Предупреждения об&#160;обновлении
+						плагинов стоит игнорировать, так как новые версии могут сломать сборку. Не&#160;все ошибки могут выводиться в&#160;терминал. Самые популярные из&#160;них:
+					</div>
+					<ul class="list">
+						<li>
+							Не&#160;работает <a href="#template" class="link link-animation">шаблонизатор</a> (теги
+							<code>&#64;&#64;include</code> и&#160;<code>&#64;&#64;loop</code>). Проверьте правильность написания путей к&#160;файлу.
+						</li>
+						<li>
+							Стили не&#160;применяются. Проверьте, нет&#160;ли противоречий со&#160;стилями в&#160;других файлах. Стили в&#160;папке <code>base</code> имеют низший
+							приоритет, файлы подключаются по&#160;порядку, описанному в&#160;файле <code>main.scss</code>. Файлы из&#160;папки <code>blocks</code> имеют высший
+							приоритет и&#160;подключаются по&#160;алфавиту.
+						</li>
+						<li>
+							Не&#160;работают <a href="#functions" class="link link-animation">функции</a>. Проверьте правильность указываемых параметров и&#160;способ применения
+							функции.
+						</li>
+						<li>Непонятные проблемы с&#160;картинками. Попробуйте пересобрать проект.</li>
+						<li>
+							Не&#160;отображается картинка (не&#160;SVG файл). Стоит проверить наличие файла с&#160;постфиксом <code>@2x</code>, предназначенный для
+							<a href="#webp" class="link link-animation">Retina</a> дисплеев.
+						</li>
+						<li>
+							Не&#160;отображается иконка (SVG файл). Нужно указать свойство <code>fill</code> или <code>stroke</code>, а&#160;также задать размер для класса
+							<a href="#svg" class="link link-animation">иконки</a>.
+						</li>
+						<li>Предыдущая проблема сохраняется. Попробуйте закрыть вкладку с&#160;сайтом и&#160;открыть снова. Можно попробовать другой браузер.</li>
+						<li>После внесения изменений сайт не&#160;обновился. Пересоберите проект.</li>
+					</ul>
+					<div class="para">
+						Если проблема не&#160;исчезла, проверьте, правильно&#160;ли вы&#160;разобрались в&#160;работе того или иного процесса. Проверьте все пути к&#160;файлам,
+						наличие нужных классов, единицы измерения значений. Перечитайте нужный пункт документации ещё&#160;раз. Проверьте, не&#160;является&#160;ли предполагаемая
+						ошибка обычным поведением какого-нибудь <a href="#automation" class="link link-animation">плагина</a>. Попробуйте пересобрать проект, открыть страницу
+						с&#160;сайтом в&#160;другом браузере. Попробуйте удалить папку <code>node_modules</code> и&#160;заново выполнить команду <code>npm install</code>. Поищите
+						вашу ошибку в&#160;интернете или спросите ChatGPT и&#160;его аналоги. Если ошибка всё ещё не&#160;исправлена,
+						<a href="https://github.com/id-andyyy/gulp-template/issues" target="_blank" class="link link-animation">создайте Issue на&#160;Github</a>, если такой проблемы
+						там ещё не&#160;поднимали.
+					</div>
+				</section>
+				<section class="feedback section-margin" id="feedback">
+					<h2 class="h2">Фидбэк</h2>
+					<div class="para"></div>
+				</section>
 			</div>
 		</main>
+
 		<script src="./js/index.bundle.js"></script>
 	</body>
 </html>

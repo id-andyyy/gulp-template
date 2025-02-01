@@ -26,10 +26,6 @@ body.lock {
       width: 100%;
     }
   }
-
-  &__icon {
-    fill: var(--light-color) !important;
-  }
 }
 
 .menu {
@@ -139,11 +135,12 @@ body.lock {
   &__row {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 
     @include tablet {
       flex-direction: column;
       margin: auto;
-      row-gap: 60px;
+      row-gap: adaptive-value(30, 40);
       padding: 50px 15px;
     }
   }
@@ -170,6 +167,27 @@ body.lock {
     @include tablet {
       font-size: 25px;
       color: var(--light-color);
+    }
+  }
+}
+
+.media {
+  display: flex;
+  gap: adaptive-value(15, 10);
+
+  &__item {
+    height: 25px;
+    transition: transform 0.1s ease-in;
+
+    @include mouse-hover {
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+    @include mouse-hover(false) {
+      &:active {
+        transform: scale(2);
+      }
     }
   }
 }

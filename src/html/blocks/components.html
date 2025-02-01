@@ -3,8 +3,11 @@
   <div class="para">Для быстрой разработки можно использовать уже готовые компоненты:</div>
   <div class="para">Header и бургер-меню - файлы <code>header.html</code>, <code>_header.scss</code> и <code>burger-menu.js</code>. Такой header используется на данной странице.</div>
   <div class="para">Аккордион - файлы <code>accordion.html</code>, <code>accordion-section.html</code>, <code>accordion.json</code>, <code>_accordion.scss</code> и <code>accordion.js</code>. Пример:</div>
-  @@include("./accordion.html")
+  <div class="text-margin">
+    @@include("./accordion.html")
+  </div>
   <div class="para">Модальное окно - файлы <code>modal.html</code>, <code>_modal.scss</code> и <code>modal.js</code>. Каждое новое модальное окно должно иметь уникальный id. Пример: <button class="modal-button" data-modal="my-modal">Открыть</button></div>
   @@include("./modal.html")
-  <div class="para last">Текущий год - файл <code>current-year.js</code>. Скрипт поддерживает актуальный год: <span class="year"></span>.</div>
+  <div class="para">Текущий год - файл <code>current-year.js</code>. Скрипт поддерживает актуальный год: <span class="year"></span>.</div>
+  <div class="para last">Смена темы - файл <code>theme.js</code>. Выбранная тема запоминается даже при обновлении страницы. <button class="theme-switcher link link-animation text">Поменяйте</button> тему сами.</div>
 </section>

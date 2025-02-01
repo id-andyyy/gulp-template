@@ -7,4 +7,24 @@
   &_gulp {
     fill: var(--main-color);
   }
+
+  &_moon {
+    fill: var(--light-color);
+    width: 25px;
+  }
+
+  &_sun {
+    fill: var(--light-color);
+    width: 25px;
+  }
+
+  &_github {
+    fill: var(--light-color);
+    width: 25px;
+  }
+
+  &_issues {
+    fill: var(--light-color);
+    width: 25px;
+  }
 }

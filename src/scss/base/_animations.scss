@@ -1,5 +1,5 @@
 .link-animation {
-  transition: all 0.3s;
+  transition: transform 0.3s;
   position: relative;
 
   &::before {
@@ -58,4 +58,11 @@ $page-offset-block: adaptive-value(50, 30);
 ._is-page-animated {
   opacity: 1;
   transform: none;
+}
+
+// Theme change
+body {
+  transition:
+    background 0.1s ease-in,
+    color 0.1s ease-in;
 }
