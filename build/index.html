@@ -147,7 +147,7 @@
 							<li><a href="#minification" class="content__item link link-animation">Минификация файлов</a></li>
 						</ol>
 					</nav>
-					<section class="automation__template template section-mini-margin" id="template">
+					<section class="automation__template template section-margin" id="template">
 						<h3 class="h3">Шаблонизатор</h3>
 						<div class="para">
 							Плагин <code>gulp-file-include</code> собирает HTML файл <code>index.html</code> из&#160;файлов блоков. Для подключения такого блока необходимо создать
@@ -156,14 +156,14 @@
 						<pre class="code">&#64;&#64;include("./blocks/имя-файла.html")</pre>
 						<div class="para last">В&#160;папке <code>blocks</code> можно создавать подпапки для более сложных проектов.</div>
 					</section>
-					<section class="paths section-mini-margin" id="paths">
+					<section class="paths section-margin" id="paths">
 						<h3 class="h3">Автоисправление путей</h3>
 						<div class="para last">
 							Плагин <code>gulp-replace</code> позволяет пользоваться подсказками редактора во&#160;время подключения файлов. То&#160;есть все пути к&#160;файлам можно
 							прописывать исходя из&#160;структуры папки <code>src</code>.
 						</div>
 					</section>
-					<section class="typograf section-mini-margin" id="typograf">
+					<section class="typograf section-margin" id="typograf">
 						<h3 class="h3">Типограф</h3>
 						<div class="para">
 							Плагин <code>gulp-typograf</code> обеспечивает хорошую читаемость текста на&#160;сайте. Он&#160;добавляет символы неразрывного пробела между короткими
@@ -189,7 +189,7 @@
 							Если нужно, чтобы часть текста не&#160;была обработана, необходимо заключить её&#160;в&#160;тег <code>&lt;no-typography&gt;&lt;/no-typography&gt;</code>.
 						</div>
 					</section>
-					<section class="scss section-mini-margin" id="scss">
+					<section class="scss section-margin" id="scss">
 						<h3 class="h3">Компиляция SCSS</h3>
 						<div class="para">
 							Плагин <code>gulp-sass</code> обеспечивает перевод SCSS кода в&#160;CSS код. Плагин <code>gulp-sass-glob</code> позволяет подключать SCSS файлы друг
@@ -222,20 +222,20 @@
 							<code>about.html</code>, то&#160;стили для этого блока будут описаны в&#160;файле <code>about.scss</code>.
 						</div>
 					</section>
-					<section class="autoprefixer section-mini-margin" id="autoprefixer">
+					<section class="autoprefixer section-margin" id="autoprefixer">
 						<h3 class="h3">Автопрефиксер</h3>
 						<div class="para">
 							Плагин <code>gulp-autoprefixer</code> автоматически добавляет вендорные префиксы к&#160;CSS-свойствам, чтобы обеспечить кросс-браузерную совместимость.
 							Например, следующие CSS свойства:
 						</div>
 						<pre class="code">
-<span class="css-props">.menu-list {
+<span class="css-selector">.menu-list</span> <span class="css-props">{
   display</span>: <span class="css-props">flex</span>;
   <span class="css-props">column-gap</span>: <span class="css-props">22</span><span class="css-units">px</span>;
 <span class="css-props">}</span></pre>
 						<div class="para">После обработки будут выглядеть так:</div>
 						<pre class="code">
-<span class="css-props">.menu-list {
+<span class="css-selector">.menu-list</span> <span class="css-props">{
   display</span>: <span class="css-props">-webkit-box</span>;
   <span class="css-props">display</span>: <span class="css-props">-ms-flexbox</span>;
   <span class="css-props">display</span>: <span class="css-props">flex</span>;
@@ -244,7 +244,7 @@
   <span class="css-props">column-gap</span>: <span class="css-props">22</span><span class="css-units">px</span>;
 <span class="css-props">}</span></pre>
 					</section>
-					<section class="sourcemaps section-mini-margin" id="sourcemaps">
+					<section class="sourcemaps section-margin" id="sourcemaps">
 						<h3 class="h3">Подсказки для стилей</h3>
 						<div class="para">
 							Плагин <code>gulp-sourcemaps</code> используется для создания source maps в&#160;процессе сборки проекта. Source maps&#160;&#8212; это специальный
@@ -260,7 +260,7 @@
 							Справа от&#160;стилей есть упоминание файла и&#160;номера строки, где описываются данные свойства. Например, <code>_text.scss:45</code>.
 						</div>
 					</section>
-					<section class="svg section-mini-margin" id="svg">
+					<section class="svg section-margin" id="svg">
 						<h3 class="h3">Работа с&#160;SVG</h3>
 						<div class="para">
 							Для добавления иконки в&#160;проект, необходимо поместить SVG файл в&#160;папку <code>./src/img/svgicons</code>. Для использования иконки в&#160;каком-то
@@ -276,13 +276,13 @@
 							<code>_icons.scss</code>, который находится в&#160;папке <code>./src/scss/base</code>:
 						</div>
 						<pre class="code last">
-<span class="css-props">icon_example {
+<span class="css-selector">.icon_example</span> <span class="css-props">{
   fill</span>: <span class="css-props">#6600ff</span>;
   <span class="css-props">width</span>: <span class="css-props">100</span><span class="css-units">px</span>;
   <span class="css-props">height</span>: <span class="css-props">50</span><span class="css-units">px</span>;
 <span class="css-props">}</span></pre>
 					</section>
-					<section class="fonts section-mini-margin" id="fonts">
+					<section class="fonts section-margin" id="fonts">
 						<h3 class="h3">Подключение шрифтов</h3>
 						<div class="para">
 							Подключения шрифтов с&#160;помощью Google Fonts производится в&#160;файле <code>_base.scss</code> папки <code>./src/scss/base</code>. Рекомендуется
@@ -298,7 +298,7 @@
 							с&#160;помощью свойства <code>font-family</code>.
 						</div>
 					</section>
-					<section class="babel section-mini-margin" id="babel">
+					<section class="babel section-margin" id="babel">
 						<h3 class="h3">Транспиляция с&#160;помощью Babel</h3>
 						<div class="para last">
 							Плагин <code>gulp-babel</code> используется для транспиляции JavaScript кода, написанного с&#160;использованием современных стандартов ECMAScript
@@ -306,7 +306,7 @@
 							разработчиком код автоматически транспилируется и&#160;попадает в&#160;файл index.js папки <code>build</code>.
 						</div>
 					</section>
-					<section class="webpack section-mini-margin" id="webpack">
+					<section class="webpack section-margin" id="webpack">
 						<h3 class="h3">Компиляция JS&#160;модулей с&#160;помощью Webpack</h3>
 						<div class="para last">
 							Плагин <code>webpack-stream</code> позволяет интегрировать Webpack. С&#160;помощью Webpack происходит
@@ -314,7 +314,7 @@
 							формируется файл <code>index.bundle.js</code>. Настройки плагина описаны в&#160;файле <code>webpack.config.js</code> в&#160;корне проекта.
 						</div>
 					</section>
-					<section class="server section-mini-margin" id="server">
+					<section class="server section-margin" id="server">
 						<h3 class="h3">Сервер</h3>
 						<div class="para">
 							Плагин <code>gulp-server-livereload</code> используется для запуска локального сервера с&#160;функцией автообновления. Он&#160;позволяет автоматически
@@ -328,13 +328,13 @@
 							<code>ip_адрес_компьютера:порт</code>.
 						</div>
 					</section>
-					<section class="images section-mini-margin" id="images">
+					<section class="images section-margin" id="images">
 						<h3 class="h3">Оптимизация изображений</h3>
 						<div class="para">
 							В&#160;режиме продакшена все картинки сжимаются без потери качества. В&#160;режими разработки для ускорения сборки проекта, этот шаг пропускается.
 						</div>
 					</section>
-					<section class="webp section-mini-margin" id="webp">
+					<section class="webp section-margin" id="webp">
 						<h3 class="h3">Поддержка WebP и&#160;Retina</h3>
 						<div class="para">
 							Для корректной работы, каждая картинка должна существовать в&#160;двух экземплярах: <code>имя.формат</code> для обычных дисплеев и&#160;<code
@@ -357,7 +357,7 @@
   &lt;<span class="html-element">img</span> <span class="html-class">src</span>=<span class="html-classname">"./img/image.png"</span> <span class="html-class">alt</span>=<span class="html-classname">"Пример"</span> /&gt;
 &lt;/<span class="html-element">picture</span>&gt;</pre>
 					</section>
-					<section class="minification section-mini-margin" id="minification">
+					<section class="minification section-margin" id="minification">
 						<h3 class="h3">Минификация файлов</h3>
 						<div class="para last">
 							Файлы HTML и&#160;CSS в&#160;режими продакшена минифицированы для уменьшения объёма. Из&#160;них убраны лишние пробелы и&#160;переносы строк. JavaScript
@@ -381,7 +381,7 @@
 							<li><a href="#vars" class="content__item link link-animation">Переменные</a></li>
 						</ol>
 					</nav>
-					<section class="classes section-mini-margin" id="classes">
+					<section class="classes section-margin" id="classes">
 						<h3 class="h3">Готовые классы</h3>
 						<div class="para">Для переиспользования и&#160;быстрого использования созданы следующие классы (по&#160;желанию их&#160;можно удалить или переделать):</div>
 						<ul class="list">
@@ -406,7 +406,7 @@
 							<li>Класс <code>"flex-center"</code> добавляет свойство <code>justify-content: center</code> (<code>_utils.scss</code>).</li>
 						</ul>
 					</section>
-					<section class="animations section-mini-margin" id="animations">
+					<section class="animations section-margin" id="animations">
 						<h3 class="h3">Готовые анимации</h3>
 						<div class="para">
 							Для удобства созданы некоторые анимации. Все они находятся в&#160;файле <code>_animations.scss</code> в&#160;папке <code>./src/scss/base</code>.
@@ -429,7 +429,7 @@
 						<div class="para last">Работу анимаций обеспечивает файл <code>animations.js</code> в&#160;папке <code>./src/js/modules</code>.</div>
 					</section>
 				</div>
-				<section class="containers section-mini-margin" id="containers">
+				<section class="containers section-margin" id="containers">
 					<div class="container">
 						<h3 class="h3">Готовые контейнеры</h3>
 						<div class="para">
@@ -465,7 +465,66 @@
 				<div class="container">
 					<section class="mixins section-margin" id="mixins">
 						<h3 class="h3">Готовые миксины</h3>
-						<div class="para"></div>
+						<div class="para">Некоторые повторяющиеся куски кода были объеденины в&#160;миксины. Для использования миксина необходимо использовать конструкцию:</div>
+						<pre class="code">
+<span class="css-units">@include</span> <span class="css-selector">mobile</span> <span class="css-units">{</span>
+  <span class="css-props">width</span>: <span class="css-props">10</span><span class="css-units">px</span>;
+<span class="css-units">}</span></pre>
+						<div class="para">
+							Вместо <code>mobile</code> пишется название миксина, в&#160;квадратных стилях указываются стили. Список миксинов (все миксины описаны в&#160;файле
+							<code>_mixins.scss</code> в&#160;папке <code>./src/scss/base</code>):
+						</div>
+						<ul class="list">
+							<li><code>laptop</code>&#160;&#8212; стили применяются к&#160;устройствам с&#160;шириной экрана ноутбука</li>
+							<li><code>tablet</code>&#160;&#8212; стили применяются к&#160;устройствам с&#160;шириной экрана планшета</li>
+							<li><code>mobile</code>&#160;&#8212; стили применяются к&#160;устройствам с&#160;шириной экрана телефона</li>
+							<li>
+								<code>media-bg</code>&#160;&#8212; изображение будет применено для Retina дисплеев. Пример:
+								<code
+									><span class="css-props">background-image</span>: <span class="css-props">url</span><span class="css-brackets">(</span
+									><span class="css-path">"./../img/example@2x.jpg"</span><span class="css-brackets">)</span></code
+								>.
+							</li>
+							<li>
+								<code>mouse-hover</code>&#160;&#8212; стили применяются для устройств с&#160;устройством ввода мышкой. Если в&#160;скобках указать
+								<code>mouse-hover(false)</code>, то&#160;стили применятся для устройств со&#160;способом ввода с&#160;помощью касания.
+							</li>
+						</ul>
+					</section>
+					<section class="functions section-margin" id="functions">
+						<h3 class="h3">Готовые функции</h3>
+						<div class="para">
+							Функции служат для вычисления значения и&#160;подстановки его вместо вызова функции. Функции описаны в&#160;файле <code>_mixins.scss</code> в&#160;папке
+							<code>./src/scss/base</code>.
+						</div>
+						<div class="para">
+							<code>adaptive-value($min-value, $max-value, $min-width, $max-width)</code>&#160;&#8212; возвращает формулу, которая гарантирует значение
+							<code>$min-value</code> пикселей при размере экрана <code>$min-width</code> пикселей и&#160;значение <code>$max-value</code> пикселей при размере экрана
+							<code>$max-width</code> пикселей. Если ширина экрана в&#160;данный момент между <code>$min-width</code> и&#160;<code>$max-width</code> или вообще вне
+							этого отрезка (например, больше <code>$max-width</code>), то&#160;формула обеспечит значение, пропорциональное ширине экрана. Параметры
+							<code>$min-width</code> и&#160;<code>$max-width</code> являются необязательными. Если их&#160;не&#160;указать, то&#160;в&#160;качестве
+							<code>$min-width</code> будет взята переменная <code>--min-layout-width</code>, а&#160;в&#160;качестве <code>$max-width</code> переменная
+							<code>--max-layout-width</code> из&#160;файла <code>_vars.scss</code> папки <code>./src/scss/base</code> (подробнее в&#160;разделе
+							<a href="#vars" class="link link-animation">Переменные</a>). Все параметры должны быть числами без указания единиц измерения. На&#160;выходе функция
+							возвращает значение с&#160;единицей измерения <code>px</code>.
+						</div>
+						<pre class="code last">
+<span class="css-selector">.element</span> <span class="css-props">{
+  width</span>: <span class="css-props">adaptive-value</span><span class="css-brackets">(</span><span class="css-props">10</span>, <span class="css-props">20</span>, <span class="css-props">300</span>, <span class="css-props">1400</span><span class="css-brackets">)</span>; <span class="css-comment">// 10px при ширине 300px и 20px при ширине 1400px</span>
+<span class="css-props">}</span></pre>
+						<div class="para">
+							<code>percentage-value($dimension, $value, $max-width, $max-height)</code>&#160;&#8212; возвращает процентное значение от&#160;заданного размера
+							<code>$value</code> относительно максимальной ширины <code>$max-width</code> или высоты <code>$max-height</code>, в&#160;зависимости от&#160;указанного
+							измерения <code>$dimension</code>. Параметр <code>$dimension</code> принимает значения <code>width</code> или <code>height</code>. Параметры
+							<code>$max-width</code> и&#160;<code>$max-height</code> являются необязательными. Если их&#160;не&#160;указать, то&#160;в&#160;качестве
+							<code>$max-width</code> будет взято значение <code>1280</code>, а&#160;в&#160;качестве <code>$max-height</code> значение <code>832</code>. Все параметры
+							должны быть числами без указания единиц измерения.
+						</div>
+						<pre class="code">
+<span class="css-selector">.element</span> <span class="css-props">{
+  width</span>: <span class="css-props">percentage-value</span><span class="css-brackets">(</span><span class="css-props">width</span>, <span class="css-props">640</span><span class="css-brackets">)</span>; <span class="css-comment">// 50% (640 / 1280 * 100%)</span>
+  <span class="css-props">height</span>: <span class="css-props">percentage-value</span><span class="css-comment">(</span><span class="css-props">height</span>, <span class="css-props">416</span><span class="css-brackets">)</span>; <span class="css-comment">// 50% (416 / 832 * 100%)</span>
+<span class="css-props">}</span></pre>
 					</section>
 				</div>
 			</section>

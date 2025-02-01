@@ -1,4 +1,16 @@
 <section class="mixins section-margin" id="mixins">
   <h3 class="h3">Готовые миксины</h3>
-  <div class="para"></div>
+  <div class="para">Некоторые повторяющиеся куски кода были объеденины в миксины. Для использования миксина необходимо использовать конструкцию:</div>
+  <pre class="code">
+<span class="css-units">@include</span> <span class="css-selector">mobile</span> <span class="css-units">{</span>
+  <span class="css-props">width</span>: <span class="css-props">10</span><span class="css-units">px</span>;
+<span class="css-units">}</span></pre>
+  <div class="para">Вместо <code>mobile</code> пишется название миксина, в квадратных стилях указываются стили. Список миксинов (все миксины описаны в файле <code>_mixins.scss</code> в папке <code>./src/scss/base</code>):</div>
+  <ul class="list">
+    <li><code>laptop</code> - стили применяются к устройствам с шириной экрана ноутбука</li>
+    <li><code>tablet</code> - стили применяются к устройствам с шириной экрана планшета</li>
+    <li><code>mobile</code> - стили применяются к устройствам с шириной экрана телефона</li>
+    <li><code>media-bg</code> - изображение будет применено для Retina дисплеев. Пример: <code><span class="css-props">background-image</span>: <span class="css-props">url</span><span class="css-brackets">(</span><span class="css-path">"./../img/example@2x.jpg"</span><span class="css-brackets">)</span></code>.</li>
+    <li><code>mouse-hover</code> - стили применяются для устройств с устройством ввода мышкой. Если в скобках указать <code>mouse-hover(false)</code>, то стили применятся для устройств со способом ввода с помощью касания. </li>
+  </ul>
 </section>
