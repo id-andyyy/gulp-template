@@ -2,5 +2,9 @@
   <h3 class="h3">Шаблонизатор</h3>
   <div class="para">Плагин <code>gulp-file-include</code> собирает HTML файл <code>index.html</code> из файлов блоков. Для подключения такого блока необходимо создать новый HTML файл в папке <code>./html/blocks/</code> и подключить его с помощью конструкции:</div>
   <pre class="code">&#64;&#64;include("./blocks/имя-файла.html")</pre>
-  <div class="para last">В папке <code>blocks</code> можно создавать подпапки для более сложных проектов.</div>
+  <div class="para">В папке <code>blocks</code> можно создавать подпапки для более сложных проектов.</div>
+  <div class="para">Ещё одной удобной конструкцией являются циклы. Для создания цикла необходим JSON файл (его можно разместить в папке <code>./src/html/data</code>) с массивом из описаний всех объектов и HTML файл (его можно разместить в папке <code>./src/html/templates</code>) с разметкой одного объекта. В этом файле в те места, куда должны вставляться данные из JSON файла, необходимо разместить конструкции вида <code>&#64;&#64;title</code>. Тогда на это место будут вставляться поля <code>title</code> каждого объекта, описанного в JSON файле. Для подключения этих файлов друг к другу используется синтаксис:</div>
+  <pre class="code">&#64;&#64;loop("./../templates/accordion.html", "./../data/accordion.json")</pre>
+  <div class="para">Пример можно посмотреть в разделе <a href="#components" class="link link-animation">Компоненты</a>. Например, по такому принципу устроен компонент аккордион.</div>
+  <div class="para last">Более подробно ознакомиться с синтаксисом можно на <a href="https://www.npmjs.com/package/gulp-file-include" target="_blank" class="link link-animation">сайте с документацией</a>.</div>
 </section>

@@ -9,7 +9,7 @@
 		<link rel="stylesheet" href="./css/main.css" />
 	</head>
 
-	<body class="dark">
+	<body class="">
 		<header class="header">
 			<div class="container">
 				<div class="header__row">
@@ -154,7 +154,27 @@
 							новый HTML файл в&#160;папке <code>./html/blocks/</code> и&#160;подключить его с&#160;помощью конструкции:
 						</div>
 						<pre class="code">&#64;&#64;include("./blocks/имя-файла.html")</pre>
-						<div class="para last">В&#160;папке <code>blocks</code> можно создавать подпапки для более сложных проектов.</div>
+						<div class="para">В&#160;папке <code>blocks</code> можно создавать подпапки для более сложных проектов.</div>
+						<div class="para">
+							Ещё одной удобной конструкцией являются циклы. Для создания цикла необходим JSON файл (его можно разместить в&#160;папке <code>./src/html/data</code>)
+							с&#160;массивом из&#160;описаний всех объектов и&#160;HTML файл (его можно разместить в&#160;папке <code>./src/html/templates</code>) с&#160;разметкой
+							одного объекта. В&#160;этом файле в&#160;те&#160;места, куда должны вставляться данные из&#160;JSON файла, необходимо разместить конструкции вида
+							<code>&#64;&#64;title</code>. Тогда на&#160;это место будут вставляться поля <code>title</code> каждого объекта, описанного в&#160;JSON файле. Для
+							подключения этих файлов друг к&#160;другу используется синтаксис:
+						</div>
+						<pre class="code">&#64;&#64;loop("./../templates/accordion.html", "./../data/accordion.json")</pre>
+						<div class="para">
+							Пример можно посмотреть в&#160;разделе <a href="#components" class="link link-animation">Компоненты</a>. Например, по&#160;такому принципу устроен
+							компонент аккордион.
+						</div>
+						<div class="para last">
+							Более подробно ознакомиться с&#160;синтаксисом можно на&#160;<a
+								href="https://www.npmjs.com/package/gulp-file-include"
+								target="_blank"
+								class="link link-animation"
+								>сайте с&#160;документацией</a
+							>.
+						</div>
 					</section>
 					<section class="paths section-margin" id="paths">
 						<h3 class="h3">Автоисправление путей</h3>
@@ -565,7 +585,46 @@
 					</section>
 				</div>
 			</section>
-			<div class="container"></div>
+			<div class="container">
+				<section class="components section-margin" id="components">
+					<h2 class="h2">Готовые компоненты</h2>
+					<div class="para">Для быстрой разработки можно использовать уже готовые компоненты:</div>
+					<div class="para">
+						Header и&#160;бургер-меню&#160;&#8212; файлы <code>header.html</code>, <code>_header.scss</code> и&#160;<code>burger-menu.js</code>. Такой header используется
+						на&#160;данной странице.
+					</div>
+					<div class="para">
+						Аккордион&#160;&#8212; файлы <code>accordion.html</code>, <code>accordion-section.html</code>, <code>accordion.json</code>,
+						<code>_accordion.scss</code> и&#160;<code>accordion.js</code>. Пример:
+					</div>
+					<div class="accordion">
+						<div class="accordion__item">
+							<button class="accordion__button">
+								<h3 class="accordion__header">Секция 1</h3>
+							</button>
+							<div class="accordion__collapse">
+								<div class="accordion__body">Содержание 1</div>
+							</div>
+						</div>
+						<div class="accordion__item">
+							<button class="accordion__button">
+								<h3 class="accordion__header">Секция 2</h3>
+							</button>
+							<div class="accordion__collapse">
+								<div class="accordion__body">Содержание 2</div>
+							</div>
+						</div>
+						<div class="accordion__item">
+							<button class="accordion__button">
+								<h3 class="accordion__header">Секция 2</h3>
+							</button>
+							<div class="accordion__collapse">
+								<div class="accordion__body">Содержание 2</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
 		</main>
 		<script src="./js/index.bundle.js"></script>
 	</body>
