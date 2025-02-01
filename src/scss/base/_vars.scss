@@ -6,7 +6,7 @@
   // Font
   --font-main: "JetBrainsMono", sans-serif;
   --font-accent: "JetBrainsMono", sans-serif;
-  --font-titles: --font-accent;
+  --font-titles: var(--font-accent);
 
   // Text colors
   --text-main: #000000;
@@ -14,7 +14,7 @@
 
   // Colors
   --page-bg: #ffffff;
-  --modal-bg: --page-bg;
+  --modal-bg: var(--page-bg);
   --main-color: #df494d;
   --light-color: #ffffff;
   --modern-color: #8800ff;
@@ -65,3 +65,5 @@
   --css-path: #9ecbff;
   --css-comment: #6a737d;
 }
+
+lapto

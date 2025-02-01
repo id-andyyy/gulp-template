@@ -560,7 +560,7 @@
 						<ul class="list">
 							<li><code>--font-main: "JetBrainsMono", sans-serif</code>&#160;&#8212; основной шрифт</li>
 							<li><code>--font-accent: "JetBrainsMono", sans-serif</code>&#160;&#8212; акцентный шрифт</li>
-							<li><code>--font-titles: --font-accent</code>&#160;&#8212; шрифт для заголовков</li>
+							<li><code>--font-titles: var(--font-accent)</code>&#160;&#8212; шрифт для заголовков</li>
 						</ul>
 						<div class="para">Цвета:</div>
 						<ul class="list">
@@ -624,8 +624,8 @@
 						</div>
 					</div>
 					<div class="para">
-						Модальное окно&#160;&#8212; файлы <code>modal.html</code>, <code>_modal.scss</code> и&#160;<code>modal.js</code>. Пример:
-						<button class="modal-button" data-modal="my-modal">Открыть</button>
+						Модальное окно&#160;&#8212; файлы <code>modal.html</code>, <code>_modal.scss</code> и&#160;<code>modal.js</code>. Каждое новое модальное окно должно иметь
+						уникальный&#160;id. Пример: <button class="modal-button" data-modal="my-modal">Открыть</button>
 					</div>
 					<div id="my-modal" class="modal">
 						<div class="modal__body">
@@ -640,7 +640,17 @@
 							</div>
 						</div>
 					</div>
-					<div class="para">Текущий год&#160;&#8212; файл <code>current-year.js</code>. Скрипт поддерживает актуальный код: <span class="year"></span>.</div>
+					<div class="para last">Текущий год&#160;&#8212; файл <code>current-year.js</code>. Скрипт поддерживает актуальный год: <span class="year"></span>.</div>
+				</section>
+				<section class="snippets section-margin" id="snippets">
+					<h2 class="h2">Сниппеты</h2>
+					<div class="para">Для более быстрой разработки в&#160;файле <code>gulp-template.code-snippets</code> в&#160;папке <code>.vscode</code> описаны сниппеты.</div>
+					<ul class="list">
+						<li><code>laptop</code>&#160;&#8212; вызывает подключение <a href="#mixins" class="link link-animation">миксина</a> laptop</li>
+						<li><code>tablet</code>&#160;&#8212; вызывает подключение <a href="#mixins" class="link link-animation">миксина</a> tablet</li>
+						<li><code>mobile</code>&#160;&#8212; вызывает подключение <a href="#mixins" class="link link-animation">миксина</a> mobile</li>
+						<li><code>svgIcon</code>&#160;&#8212; вызывает подключение <a href="#svg" class="link link-animation">SVG файла</a></li>
+					</ul>
 				</section>
 			</div>
 		</main>

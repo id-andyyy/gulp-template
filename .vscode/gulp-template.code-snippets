@@ -1,4 +1,34 @@
 {
+  "laptopTablet": {
+    "scope": "css,scss",
+    "prefix": "laptop",
+    "body": [
+      "@include laptop {",
+      "  ${1}",
+      "}"
+    ],
+    "description": "Laptop mixin"
+  },
+  "mediaTablet": {
+    "scope": "css,scss",
+    "prefix": "tablet",
+    "body": [
+      "@include tablet {",
+      "  ${1}",
+      "}"
+    ],
+    "description": "Tablet mixin"
+  },
+  "mediaMobile": {
+    "scope": "css,scss",
+    "prefix": "mobile",
+    "body": [
+      "@include mobile {",
+      "  ${1}",
+      "}"
+    ],
+    "description": "Mobile mixin"
+  },
   "SVG icon sprite": {
     "prefix": "svgIcon",
     "body": [
