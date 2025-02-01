@@ -14,6 +14,7 @@
 
   // Colors
   --page-bg: #ffffff;
+  --modal-bg: --page-bg;
   --main-color: #df494d;
   --light-color: #ffffff;
   --modern-color: #8800ff;
@@ -48,6 +49,7 @@
 
   // Colors
   --page-bg: #000000;
+  --modal-bg: var(--code-color);
   --main-color: #8849df;
   --code-color: #232327;
   --link-color: #a565ff;
