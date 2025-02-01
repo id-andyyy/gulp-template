@@ -8,6 +8,10 @@
     fill: var(--main-color);
   }
 
+  &_header {
+    fill: var(--light-color);
+  }
+
   &_moon {
     fill: var(--light-color);
     width: 25px;
