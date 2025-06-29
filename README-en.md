@@ -4,7 +4,7 @@
 ![Top Language](https://img.shields.io/github/languages/top/id-andyyy/gulp-template?style=flat&color=white)
 ![Pet Project](https://img.shields.io/badge/pet-project-8400FF)
 
-# Gulp Template&nbsp;🥑
+# Gulp Template&nbsp;&#129380;
 
 A project template for web development using Gulp as a task runner. It is designed for quickly setting up a development environment and automating routine tasks such as SASS compilation, image processing, JavaScript bundling, and running a local server&nbsp;👨‍💻.
 
