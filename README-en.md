@@ -100,4 +100,4 @@ gulp-template/
 I would appreciate it if you give it a star&nbsp;⭐. If you find a bug or have suggestions for improvement,
 use the [Issues](https://github.com/id-andyyy/gulp-template/issues) section.
 
-Read in [Russian&nbsp;🇷🇺](README.md)
+Читать на [русском&nbsp;🇷🇺](README.md)
