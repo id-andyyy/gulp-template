@@ -1,25 +1,25 @@
 {
-  "name": "psy-tatyanao",
+  "name": "gulp-template",
   "version": "1.0.0",
-  "description": "Business card website for psychologist Tatyana Obrezkova",
+  "description": "Gulp template for projects",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/id-andyyy/psy-tatyanao.git"
+    "url": "git+https://github.com/id-andyyy/gulp-template.git"
   },
   "keywords": [
     "website",
-    "psychologist"
+    "gulp"
   ],
   "author": "Andy",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/id-andyyy/psy-tatyanao/issues"
+    "url": "https://github.com/id-andyyy/gulp-template/issues"
   },
-  "homepage": "https://github.com/id-andyyy/psy-tatyanao#readme",
+  "homepage": "https://github.com/id-andyyy/gulp-template#readme",
   "devDependencies": {
     "@babel/core": "^7.24.7",
     "@babel/preset-env": "^7.24.7",
